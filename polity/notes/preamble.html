@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preamble of Indian Constitution – Complete Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Lato:wght@300;400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --saffron: #FF9933;
+    --white: #FFFFFF;
+    --green: #138808;
+    --navy: #1a2744;
+    --navy-light: #243160;
+    --gold: #D4A017;
+    --gold-light: #F5C842;
+    --cream: #FDF8F0;
+    --text-dark: #1a1a2e;
+    --text-mid: #3d3d6b;
+    --card-bg: rgba(255,255,255,0.95);
+    --shadow: 0 8px 40px rgba(26,39,68,0.13);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    overflow-x: hidden;
+  }
+
+  /* HERO HEADER */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #0f1b3d 40%, #1e3a5f 100%);
+    color: white;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent, transparent 40px,
+      rgba(255,153,51,0.04) 40px, rgba(255,153,51,0.04) 80px
+    );
+  }
+  .tricolor-bar {
+    display: flex; height: 8px;
+  }
+  .tricolor-bar div { flex: 1; }
+  .tc-saffron { background: var(--saffron); }
+  .tc-white   { background: #ffffff; }
+  .tc-green   { background: var(--green); }
+
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 30px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .ashoka-wheel {
+    font-size: 60px;
+    margin-bottom: 18px;
+    animation: spin-slow 20s linear infinite;
+    display: inline-block;
+  }
+  @keyframes spin-slow { to { transform: rotate(360deg); } }
+
+  .hero h1 {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--gold-light), var(--saffron), var(--gold-light));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+  }
+  .hero-sub {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 300;
+  }
+  .hero-badges {
+    display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+    margin-top: 28px;
+  }
+  .badge {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,153,51,0.4);
+    color: var(--gold-light);
+    padding: 6px 18px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    backdrop-filter: blur(4px);
+  }
+
+  /* PREAMBLE TEXT BOX */
+  .preamble-quote {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+  .preamble-card {
+    background: linear-gradient(135deg, #fff8ee, #fff);
+    border: 2px solid var(--gold);
+    border-radius: 18px;
+    padding: 36px 42px;
+    box-shadow: 0 10px 50px rgba(212,160,23,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .preamble-card::before {
+    content: '❝';
+    position: absolute; top: 10px; left: 20px;
+    font-size: 80px; color: rgba(212,160,23,0.12);
+    font-family: serif; line-height: 1;
+  }
+  .preamble-card p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.05rem;
+    line-height: 2;
+    color: var(--text-dark);
+    text-align: justify;
+  }
+  .preamble-card .key-words { color: var(--saffron); font-weight: 700; }
+  .preamble-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  /* MAIN CONTAINER */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px 60px;
+  }
+
+  /* SECTION HEADERS */
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    font-weight: 700;
+    margin: 50px 0 22px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, var(--saffron), transparent);
+    border-radius: 2px;
+  }
+  .section-num {
+    background: var(--saffron);
+    color: white;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.9rem;
+    font-family: 'Cinzel', serif;
+    flex-shrink: 0;
+  }
+
+  /* CARDS GRID */
+  .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+
+  .card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 24px 26px;
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--saffron);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 16px 50px rgba(26,39,68,0.18); }
+  .card.green-top  { border-top-color: var(--green); }
+  .card.navy-top   { border-top-color: var(--navy); }
+  .card.gold-top   { border-top-color: var(--gold); }
+
+  .card-icon { font-size: 2rem; margin-bottom: 10px; }
+  .card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+  .card p, .card li {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: #444;
+  }
+  .card ul { padding-left: 16px; }
+  .card li { margin-bottom: 4px; }
+
+  /* THEME BLOCKS */
+  .theme-block {
+    background: white;
+    border-radius: 18px;
+    padding: 28px 32px;
+    box-shadow: var(--shadow);
+    margin-bottom: 18px;
+    border-left: 6px solid var(--saffron);
+    position: relative;
+  }
+  .theme-block.t2 { border-left-color: var(--navy); }
+  .theme-block.t3 { border-left-color: var(--green); }
+  .theme-block.t4 { border-left-color: var(--gold); }
+
+  .theme-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--saffron);
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+  .theme-block.t2 .theme-label { color: var(--navy); }
+  .theme-block.t3 .theme-label { color: var(--green); }
+  .theme-block.t4 .theme-label { color: var(--gold); }
+  .theme-block h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+  }
+
+  /* NATURE OF STATE – pills */
+  .state-nature {
+    display: flex; flex-wrap: wrap; gap: 14px; margin-bottom: 24px;
+  }
+  .state-pill {
+    background: var(--navy);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    position: relative;
+    cursor: default;
+    transition: background 0.3s;
+  }
+  .state-pill:hover { background: var(--saffron); }
+  .state-pill.added { background: #5c3d11; border: 2px dashed var(--gold); }
+  .state-pill.added:hover { background: var(--gold); color: var(--navy); }
+
+  /* OBJECTIVES TABLE */
+  .obj-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .obj-card {
+    border-radius: 14px;
+    padding: 22px 20px;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .obj-card.justice { background: linear-gradient(135deg, #1a2744, #2c4a8a); }
+  .obj-card.liberty { background: linear-gradient(135deg, #b35400, #ff7c00); }
+  .obj-card.equality { background: linear-gradient(135deg, #0d5c1e, #1a8a2e); }
+  .obj-card.fraternity { background: linear-gradient(135deg, #7b3280, #b84fc0); }
+  .obj-card h3 { font-family: 'Cinzel', serif; font-size: 1.1rem; margin-bottom: 8px; }
+  .obj-card p { font-size: 0.82rem; line-height: 1.7; opacity: 0.9; }
+
+  /* CASE LAW */
+  .case-strip {
+    background: linear-gradient(135deg, var(--navy), #1e3a5f);
+    border-radius: 14px;
+    padding: 20px 26px;
+    margin-bottom: 14px;
+    color: white;
+    display: flex; gap: 18px; align-items: flex-start;
+  }
+  .case-year {
+    background: var(--saffron);
+    color: white;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .case-strip h4 { font-family: 'Playfair Display', serif; font-size: 1rem; margin-bottom: 4px; color: var(--gold-light); }
+  .case-strip p  { font-size: 0.85rem; line-height: 1.65; opacity: 0.88; }
+
+  /* QUICK FACTS */
+  .fact-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+  }
+  .fact-table th {
+    background: var(--navy);
+    color: white;
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    padding: 14px 20px;
+    text-align: left;
+    letter-spacing: 1px;
+  }
+  .fact-table td {
+    padding: 12px 20px;
+    font-size: 0.88rem;
+    border-bottom: 1px solid #f0ede5;
+    color: #333;
+    vertical-align: top;
+  }
+  .fact-table tr:last-child td { border-bottom: none; }
+  .fact-table tr:nth-child(even) td { background: #fdf9f2; }
+  .fact-table .highlight { color: var(--saffron); font-weight: 700; }
+
+  /* AMENDMENT BOX */
+  .amendment-box {
+    background: linear-gradient(135deg, #fff3e0, #fff9f0);
+    border: 2px solid var(--saffron);
+    border-radius: 16px;
+    padding: 26px 30px;
+    margin: 24px 0;
+  }
+  .amendment-box h4 {
+    font-family: 'Cinzel', serif;
+    color: var(--saffron);
+    margin-bottom: 12px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+  }
+  .amendment-box p { font-size: 0.9rem; line-height: 1.8; color: #444; }
+  .amendment-box .tag { background: var(--saffron); color: white; border-radius: 6px; padding: 2px 10px; font-size: 0.78rem; font-weight: 700; margin-right: 8px; }
+
+  /* SUMMARY BOX */
+  .summary {
+    background: linear-gradient(135deg, var(--navy), #1e3a5f);
+    color: white;
+    border-radius: 20px;
+    padding: 36px 40px;
+    margin: 40px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .summary::before {
+    content: '🇮🇳';
+    position: absolute; right: 30px; top: 50%;
+    transform: translateY(-50%);
+    font-size: 80px; opacity: 0.08;
+  }
+  .summary h3 { font-family: 'Cinzel', serif; font-size: 1.3rem; color: var(--gold-light); margin-bottom: 16px; }
+  .summary p { font-family: 'Playfair Display', serif; font-size: 1.05rem; line-height: 1.9; opacity: 0.92; }
+  .summary strong { color: var(--gold-light); }
+
+  /* ===== MIND MAP ===== */
+  #mindmap { padding-bottom: 40px; }
+  .mindmap-wrapper {
+    background: linear-gradient(135deg, #0d1b3e, #162040, #1a2e55);
+    border-radius: 24px;
+    padding: 40px 20px 50px;
+    box-shadow: 0 20px 80px rgba(10,20,60,0.35);
+    overflow-x: auto;
+    position: relative;
+  }
+  .mindmap-title {
+    font-family: 'Cinzel', serif;
+    color: var(--gold-light);
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+  }
+
+  .mm-svg { display: block; margin: 0 auto; min-width: 780px; }
+
+  /* Central node */
+  .mm-center rect { fill: var(--saffron); rx: 16; ry: 16; }
+  .mm-center text { fill: white; font-family: 'Cinzel', serif; font-size: 14px; font-weight: 700; }
+
+  /* Branch nodes */
+  .mm-branch-bg { rx: 12; ry: 12; }
+  .mm-branch text { font-family: 'Lato', sans-serif; font-size: 12px; font-weight: 700; fill: white; }
+
+  /* Leaf nodes */
+  .mm-leaf rect { rx: 8; ry: 8; }
+  .mm-leaf text { font-family: 'Lato', sans-serif; font-size: 10px; fill: white; }
+
+  /* connector lines */
+  .mm-line { fill: none; stroke-width: 2; opacity: 0.6; }
+
+  /* Legend */
+  .mm-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-top: 28px; }
+  .mm-legend-item { display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.7); font-size: 0.8rem; font-family: 'Lato', sans-serif; }
+  .mm-legend-dot { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
+
+  @media (max-width: 600px) {
+    .hero h1 { font-size: 1.6rem; }
+    .preamble-card { padding: 22px; }
+    .container { padding: 0 14px 40px; }
+    .summary { padding: 26px 22px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="tricolor-bar"><div class="tc-saffron"></div><div class="tc-white"></div><div class="tc-green"></div></div>
+  <div class="hero-inner">
+    <div class="ashoka-wheel">☸</div>
+    <h1>Preamble of the Indian Constitution</h1>
+    <div class="hero-sub">Comprehensive Lecture Notes &nbsp;·&nbsp; Civil Services Examination</div>
+    <div class="hero-badges">
+      <span class="badge">UPSC Prelims</span>
+      <span class="badge">UPSC Mains</span>
+      <span class="badge">Polity</span>
+      <span class="badge">GS Paper II</span>
+      <span class="badge">Adopted: 26 Nov 1949</span>
+    </div>
+  </div>
+  <div class="tricolor-bar"><div class="tc-green"></div><div class="tc-white"></div><div class="tc-saffron"></div></div>
+</div>
+
+<!-- PREAMBLE TEXT -->
+<div class="preamble-quote">
+  <div class="preamble-card">
+    <div class="preamble-label">✦ The Preamble — Text</div>
+    <p>
+      <span class="key-words">WE, THE PEOPLE OF INDIA</span>, having solemnly resolved to constitute India into a
+      <span class="key-words">SOVEREIGN SOCIALIST SECULAR DEMOCRATIC REPUBLIC</span>
+      and to secure to all its citizens:
+      <span class="key-words">JUSTICE</span>, Social, Economic and Political;
+      <span class="key-words">LIBERTY</span> of thought, expression, belief, faith and worship;
+      <span class="key-words">EQUALITY</span> of status and of opportunity; and to promote among them all
+      <span class="key-words">FRATERNITY</span> assuring the dignity of the individual and the
+      <span class="key-words">UNITY AND INTEGRITY OF THE NATION</span>;
+      IN OUR CONSTITUENT ASSEMBLY this twenty-sixth day of November, 1949, do HEREBY ADOPT, ENACT AND GIVE TO OURSELVES THIS CONSTITUTION.
+    </p>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- SECTION 1: What is Preamble -->
+  <div class="section-title"><span class="section-num">1</span> What Is the Preamble?</div>
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-icon">📖</div>
+      <h3>Philosophy of the Constitution</h3>
+      <p>The Preamble is the <strong>soul and core idea</strong> of the Constitution — like a preface to a book, it reveals what the Constitution is all about.</p>
+    </div>
+    <div class="card green-top">
+      <div class="card-icon">🔑</div>
+      <h3>Key to Makers' Minds</h3>
+      <p><strong>Berubari Union Case (1960):</strong> The Preamble is the <em>"key to unlock the mind of the makers"</em> of the Constitution (Constituent Assembly).</p>
+    </div>
+    <div class="card navy-top">
+      <div class="card-icon">⚖️</div>
+      <h3>Ideals & Aspirations</h3>
+      <p>Supreme Court described the Preamble as containing the <strong>ideals and aspirations</strong> of the Constitution — its guiding spirit.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 2: Source -->
+  <div class="section-title"><span class="section-num">2</span> Source of the Preamble</div>
+  <div class="theme-block t2">
+    <div class="theme-label">Origin</div>
+    <h3>Objectives Resolution by Pandit Nehru</h3>
+    <p style="font-size:0.9rem;line-height:1.8;color:#333;">The Preamble is based on the <strong>Objectives Resolution</strong> moved by <strong>Pandit Jawaharlal Nehru</strong> in the Constituent Assembly and adopted on <strong>22nd January 1947</strong>. With some changes in wording, the Objectives Resolution became the Preamble.</p>
+  </div>
+
+  <!-- SECTION 3: 4 Themes -->
+  <div class="section-title"><span class="section-num">3</span> Four Broad Themes</div>
+
+  <div class="theme-block">
+    <div class="theme-label">Theme 1 — Source of Authority</div>
+    <h3>"We the People of India"</h3>
+    <p style="font-size:0.9rem;line-height:1.8;color:#444;">The Constitution derives its authority from the <strong>people of India</strong> — not from any foreign power (UN, UK, USA, etc.). It is the <em>gift of the people to themselves</em>. This reflects <strong>Popular Sovereignty</strong> — people are the ultimate sovereign in a democracy.</p>
+  </div>
+
+  <div class="theme-block t2">
+    <div class="theme-label">Theme 2 — Nature of the Indian State</div>
+    <h3>"Sovereign Socialist Secular Democratic Republic"</h3>
+    <p style="font-size:0.88rem;color:#555;margin-bottom:16px;">All terms are written in <strong>capital letters without commas</strong> → they form one integrated whole.</p>
+    <div class="state-nature">
+      <span class="state-pill">Sovereign</span>
+      <span class="state-pill added" title="Added by 42nd Amendment 1976">Socialist ★</span>
+      <span class="state-pill added" title="Added by 42nd Amendment 1976">Secular ★</span>
+      <span class="state-pill">Democratic</span>
+      <span class="state-pill">Republic</span>
+    </div>
+    <p style="font-size:0.78rem;color:var(--gold);margin-bottom:18px;">★ Added by 42nd Constitutional Amendment Act, 1976</p>
+    <div class="grid-2">
+      <div style="background:#f7f9ff;border-radius:10px;padding:16px;">
+        <strong style="color:var(--navy);font-size:0.9rem;">🛡️ Sovereign</strong>
+        <p style="font-size:0.84rem;margin-top:6px;line-height:1.7;color:#444;">India can make/unmake any decision without external interference. Joining WTO was voluntary — sovereignty is not compromised.</p>
+      </div>
+      <div style="background:#f7f9ff;border-radius:10px;padding:16px;">
+        <strong style="color:var(--navy);font-size:0.9rem;">🗳️ Democratic</strong>
+        <p style="font-size:0.84rem;margin-top:6px;line-height:1.7;color:#444;">Government of the people, by the people, for the people (Abraham Lincoln). Equal participation; right to vote and contest.</p>
+      </div>
+      <div style="background:#f7f9ff;border-radius:10px;padding:16px;">
+        <strong style="color:var(--navy);font-size:0.9rem;">🏛️ Republic</strong>
+        <p style="font-size:0.84rem;margin-top:6px;line-height:1.7;color:#444;">Head of State (President) is <em>elected</em>, not hereditary (unlike Britain's constitutional monarchy). Office open to all citizens without discrimination.</p>
+      </div>
+      <div style="background:#fff5e6;border-radius:10px;padding:16px;border:1px solid var(--saffron);">
+        <strong style="color:var(--saffron);font-size:0.9rem;">⚡ Socialist (42nd Amdt)</strong>
+        <p style="font-size:0.84rem;margin-top:6px;line-height:1.7;color:#444;">Fabian/Gandhian type — Welfare State. Not Marxist (no abolition of private property). Aim: minimize inequality. <em>D.S. Nakara vs UoI.</em></p>
+      </div>
+      <div style="background:#fff5e6;border-radius:10px;padding:16px;border:1px solid var(--saffron);">
+        <strong style="color:var(--saffron);font-size:0.9rem;">🕌 Secular (42nd Amdt)</strong>
+        <p style="font-size:0.84rem;margin-top:6px;line-height:1.7;color:#444;">Principled Distance / Positive Secularism. State equally protects all religions. No state religion. Arts. 15, 16, 27. Before 1976: implicit; after 1976: explicit.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="theme-block t3">
+    <div class="theme-label">Theme 3 — Objectives of the Constitution</div>
+    <h3>Justice · Liberty · Equality · Fraternity</h3>
+    <div class="obj-grid" style="margin-top:16px;">
+      <div class="obj-card justice">
+        <h3>⚖️ Justice</h3>
+        <p><strong>Social:</strong> End caste/gender discrimination, untouchability, manual scavenging.<br><strong>Economic:</strong> Reduce inequality; MGNREGA, scholarships, pensions.<br><strong>Political:</strong> Universal Adult Franchise; <em>Lily Thomas (2013)</em> — struck down Sec. 8(4) RP Act.</p>
+      </div>
+      <div class="obj-card liberty">
+        <h3>🕊️ Liberty</h3>
+        <p>Freedom of thought, expression, belief, faith, and worship. Protects individuals from arbitrary state interference.</p>
+      </div>
+      <div class="obj-card equality">
+        <h3>🟰 Equality</h3>
+        <p>No discrimination on grounds of religion, race, caste, sex, or place of birth. Equal status and opportunity for all citizens.</p>
+      </div>
+      <div class="obj-card fraternity">
+        <h3>🤝 Fraternity</h3>
+        <p>Sense of brotherhood despite diversity in language, religion, caste, food, dress. Promotes <strong>Unity in Diversity</strong>.</p>
+      </div>
+    </div>
+    <div style="margin-top:14px;background:rgba(255,255,255,0.06);border-radius:10px;padding:14px 18px;">
+      <p style="font-size:0.85rem;color:#444;"><strong style="color:var(--navy);">🇫🇷 Borrowed from French Revolution:</strong> Liberty, Equality, Fraternity | <strong style="color:var(--navy);">"Integrity"</strong> added by 42nd Amendment to counter secessionist tendencies (Khalistan, Kashmir, Northeast movements).</p>
+    </div>
+  </div>
+
+  <div class="theme-block t4">
+    <div class="theme-label">Theme 4 — Date of Adoption</div>
+    <h3>26th November 1949</h3>
+    <div class="grid-2">
+      <div style="background:#fffbf0;border-radius:10px;padding:16px;">
+        <strong style="color:var(--gold);font-size:0.9rem;">📅 Constitution Day (Samvidhan Divas)</strong>
+        <p style="font-size:0.84rem;margin-top:6px;line-height:1.7;color:#444;">Adopted on <strong>26 November 1949</strong>. Celebrated as Constitution Day / Samvidhan Divas.</p>
+      </div>
+      <div style="background:#fffbf0;border-radius:10px;padding:16px;">
+        <strong style="color:var(--green);font-size:0.9rem;">🗓️ Republic Day</strong>
+        <p style="font-size:0.84rem;margin-top:6px;line-height:1.7;color:#444;">Enacted/came into force on <strong>26 January 1950</strong>. Chose this date to link with the Lahore Session (1929) — Purna Swaraj resolution and first Independence Day celebration on 26 Jan 1930.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 4: SC Cases -->
+  <div class="section-title"><span class="section-num">4</span> Supreme Court Observations</div>
+
+  <div class="case-strip">
+    <span class="case-year">1960</span>
+    <div>
+      <h4>Berubari Union Case</h4>
+      <p>Preamble is <strong>not</strong> part of the Constitution. It is the "key to unlock the mind of the makers." Preamble cannot grant powers or impose restrictions by itself.</p>
+    </div>
+  </div>
+  <div class="case-strip">
+    <span class="case-year">1973</span>
+    <div>
+      <h4>Kesavananda Bharati Case</h4>
+      <p>Overruled Berubari — Preamble <strong>is</strong> part of the Constitution. Preamble contains elements of the <strong>Basic Structure</strong>. Parliament can amend the Preamble to enrich it but cannot damage the basic structure.</p>
+    </div>
+  </div>
+  <div class="case-strip">
+    <span class="case-year">1995</span>
+    <div>
+      <h4>LIC of India Case</h4>
+      <p>Reaffirmed Kesavananda Bharati — Preamble <strong>is</strong> part of the Constitution. It helps interpret ambiguous constitutional provisions.</p>
+    </div>
+  </div>
+  <div class="case-strip">
+    <span class="case-year">2017</span>
+    <div>
+      <h4>Justice K.S. Puttaswamy Case</h4>
+      <p>Right to Privacy under Article 21 was derived partly using <strong>"Dignity"</strong> from the Preamble — demonstrating its interpretive role in constitutional jurisprudence.</p>
+    </div>
+  </div>
+
+  <!-- SECTION 5: Amendment -->
+  <div class="section-title"><span class="section-num">5</span> 42nd Constitutional Amendment, 1976</div>
+  <div class="amendment-box">
+    <h4>⚡ Words Added to the Preamble</h4>
+    <p>During the Emergency (Indira Gandhi era), the <strong>42nd Constitutional Amendment Act, 1976</strong> added three words to the Preamble:</p>
+    <p style="margin-top:12px;">
+      <span class="tag">Socialist</span>
+      <span class="tag">Secular</span>
+      <span class="tag">Integrity</span>
+    </p>
+    <p style="margin-top:14px;">Before 1976, Secularism was <em>implicit</em> in the Constitution; after 1976 it became <em>explicit</em>. "Integrity" was added to counter growing secessionist tendencies in certain states.</p>
+  </div>
+
+  <!-- SECTION 6: Key Facts -->
+  <div class="section-title"><span class="section-num">6</span> Key Facts for Prelims / Mains</div>
+  <table class="fact-table">
+    <tr><th>Fact</th><th>Detail</th></tr>
+    <tr><td>First country to start Constitution with Preamble</td><td class="highlight">USA</td></tr>
+    <tr><td>Indian Preamble starts with</td><td class="highlight">"We the People of India"</td></tr>
+    <tr><td>Objectives Resolution moved by</td><td>Pandit Jawaharlal Nehru (22 Jan 1947)</td></tr>
+    <tr><td>Adopted on</td><td class="highlight">26 November 1949 — Constitution Day</td></tr>
+    <tr><td>Came into force on</td><td class="highlight">26 January 1950 — Republic Day</td></tr>
+    <tr><td>Words added by 42nd Amendment (1976)</td><td>Socialist, Secular, Integrity</td></tr>
+    <tr><td>Liberty, Equality, Fraternity — borrowed from</td><td class="highlight">French Revolution</td></tr>
+    <tr><td>Is Preamble enforceable?</td><td>No — but used to <strong>interpret</strong> ambiguous provisions</td></tr>
+    <tr><td>Can Parliament amend the Preamble?</td><td>Yes — to enrich; but cannot damage the <strong>Basic Structure</strong></td></tr>
+    <tr><td>D.S. Nakara vs Union of India</td><td>Socialism = eliminating inequality</td></tr>
+    <tr><td>Lily Thomas vs Union of India (2013)</td><td>Struck down Section 8(4) of Representation of People Act</td></tr>
+  </table>
+
+  <!-- SUMMARY -->
+  <div class="summary">
+    <h3>✦ Quick One-Liner Summary</h3>
+    <p>The Preamble is the <strong>soul and philosophy</strong> of the Indian Constitution. It declares India as a <strong>Sovereign Socialist Secular Democratic Republic</strong> and outlines the objectives of securing <strong>Justice, Liberty, Equality, and Fraternity</strong> while assuring the <strong>dignity of the individual</strong> and the <strong>unity and integrity of the Nation</strong>. It derives its authority from <strong>"We the People of India"</strong> and was adopted on <strong>26 November 1949</strong>.</p>
+  </div>
+
+  <!-- ===== MIND MAP ===== -->
+  <div id="mindmap">
+    <div class="section-title"><span class="section-num">✦</span> Mind Map — Preamble at a Glance</div>
+    <div class="mindmap-wrapper">
+      <div class="mindmap-title">☸ &nbsp; Preamble of the Indian Constitution &nbsp; ☸</div>
+
+      <svg class="mm-svg" viewBox="0 0 900 700" xmlns="http://www.w3.org/2000/svg" font-family="'Lato', sans-serif">
+
+        <!-- === CONNECTOR LINES === -->
+        <!-- Center to branches -->
+        <line x1="450" y1="310" x2="450" y2="108" stroke="#FF9933" stroke-width="2.5" opacity="0.7"/>
+        <line x1="450" y1="340" x2="100" y2="340" stroke="#138808" stroke-width="2.5" opacity="0.7"/>
+        <line x1="450" y1="370" x2="100" y2="490" stroke="#D4A017" stroke-width="2.5" opacity="0.7"/>
+        <line x1="450" y1="340" x2="800" y2="210" stroke="#4a90d9" stroke-width="2.5" opacity="0.7"/>
+        <line x1="450" y1="370" x2="800" y2="490" stroke="#9b59b6" stroke-width="2.5" opacity="0.7"/>
+        <line x1="450" y1="395" x2="450" y2="565" stroke="#e74c3c" stroke-width="2.5" opacity="0.7"/>
+
+        <!-- Saffron branch — leaves lines -->
+        <line x1="450" y1="90" x2="300" y2="35" stroke="#FF9933" stroke-width="1.5" opacity="0.5"/>
+        <line x1="450" y1="90" x2="605" y2="35" stroke="#FF9933" stroke-width="1.5" opacity="0.5"/>
+
+        <!-- Green branch — leaves -->
+        <line x1="80" y1="340" x2="10" y2="280" stroke="#138808" stroke-width="1.5" opacity="0.5"/>
+        <line x1="80" y1="340" x2="10" y2="340" stroke="#138808" stroke-width="1.5" opacity="0.5"/>
+        <line x1="80" y1="340" x2="10" y2="400" stroke="#138808" stroke-width="1.5" opacity="0.5"/>
+
+        <!-- Gold branch — leaves -->
+        <line x1="78" y1="500" x2="10" y2="455" stroke="#D4A017" stroke-width="1.5" opacity="0.5"/>
+        <line x1="78" y1="500" x2="10" y2="500" stroke="#D4A017" stroke-width="1.5" opacity="0.5"/>
+        <line x1="78" y1="500" x2="10" y2="545" stroke="#D4A017" stroke-width="1.5" opacity="0.5"/>
+
+        <!-- Blue branch leaves -->
+        <line x1="820" y1="210" x2="890" y2="155" stroke="#4a90d9" stroke-width="1.5" opacity="0.5"/>
+        <line x1="820" y1="210" x2="890" y2="210" stroke="#4a90d9" stroke-width="1.5" opacity="0.5"/>
+        <line x1="820" y1="210" x2="890" y2="265" stroke="#4a90d9" stroke-width="1.5" opacity="0.5"/>
+
+        <!-- Purple branch leaves -->
+        <line x1="820" y1="490" x2="890" y2="440" stroke="#9b59b6" stroke-width="1.5" opacity="0.5"/>
+        <line x1="820" y1="490" x2="890" y2="490" stroke="#9b59b6" stroke-width="1.5" opacity="0.5"/>
+        <line x1="820" y1="490" x2="890" y2="540" stroke="#9b59b6" stroke-width="1.5" opacity="0.5"/>
+
+        <!-- Red branch leaves -->
+        <line x1="450" y1="580" x2="320" y2="635" stroke="#e74c3c" stroke-width="1.5" opacity="0.5"/>
+        <line x1="450" y1="580" x2="450" y2="645" stroke="#e74c3c" stroke-width="1.5" opacity="0.5"/>
+        <line x1="450" y1="580" x2="580" y2="635" stroke="#e74c3c" stroke-width="1.5" opacity="0.5"/>
+
+        <!-- ===== CENTER NODE ===== -->
+        <rect x="330" y="303" width="240" height="70" rx="14" ry="14" fill="#FF9933"/>
+        <rect x="332" y="305" width="236" height="66" rx="12" ry="12" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.5"/>
+        <text x="450" y="330" text-anchor="middle" fill="white" font-family="'Cinzel', serif" font-size="13" font-weight="700">PREAMBLE</text>
+        <text x="450" y="352" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9.5">Indian Constitution</text>
+        <text x="450" y="365" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9.5">Adopted: 26 Nov 1949</text>
+
+        <!-- ===== BRANCH 1: TOP — Source of Authority (saffron) ===== -->
+        <rect x="355" y="68" width="190" height="46" rx="11" fill="#c0691f"/>
+        <text x="450" y="88" text-anchor="middle" fill="white" font-size="11" font-weight="700">Source of Authority</text>
+        <text x="450" y="103" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9">"We the People of India"</text>
+
+        <!-- Leaves top -->
+        <rect x="190" y="16" width="150" height="36" rx="8" fill="#a0540f"/>
+        <text x="265" y="30" text-anchor="middle" fill="white" font-size="9" font-weight="700">Popular Sovereignty</text>
+        <text x="265" y="44" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="8">People = Ultimate Sovereign</text>
+
+        <rect x="460" y="16" width="150" height="36" rx="8" fill="#a0540f"/>
+        <text x="535" y="30" text-anchor="middle" fill="white" font-size="9" font-weight="700">Not from foreign power</text>
+        <text x="535" y="44" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="8">Gift of people to themselves</text>
+
+        <!-- ===== BRANCH 2: LEFT — Nature of State (green) ===== -->
+        <rect x="-10" y="310" width="180" height="58" rx="11" fill="#0d5c1e"/>
+        <text x="80" y="330" text-anchor="middle" fill="white" font-size="11" font-weight="700">Nature of State</text>
+        <text x="80" y="345" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8.5">Sov. Soc. Sec. Dem. Rep.</text>
+        <text x="80" y="358" text-anchor="middle" fill="#a8e8b0" font-size="8">42nd Amdt → Socialist, Secular</text>
+
+        <!-- Leaves left-top -->
+        <rect x="-100" y="254" width="110" height="32" rx="7" fill="#0a4218"/>
+        <text x="-45" y="266" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">Sovereign</text>
+        <text x="-45" y="279" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">No external interference</text>
+
+        <rect x="-100" y="322" width="110" height="32" rx="7" fill="#0a4218"/>
+        <text x="-45" y="334" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">Democratic</text>
+        <text x="-45" y="347" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Of/By/For the People</text>
+
+        <rect x="-100" y="390" width="110" height="32" rx="7" fill="#0a4218"/>
+        <text x="-45" y="402" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">Republic</text>
+        <text x="-45" y="415" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Elected Head of State</text>
+
+        <!-- ===== BRANCH 3: BOTTOM-LEFT — SC Cases (gold) ===== -->
+        <rect x="-10" y="472" width="178" height="56" rx="11" fill="#7a5c00"/>
+        <text x="79" y="492" text-anchor="middle" fill="white" font-size="11" font-weight="700">SC Cases</text>
+        <text x="79" y="508" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8.5">Key Judicial Pronouncements</text>
+        <text x="79" y="521" text-anchor="middle" fill="#f5e68a" font-size="8">Part of Constitution? ✓ Yes</text>
+
+        <rect x="-100" y="428" width="112" height="32" rx="7" fill="#5a4200"/>
+        <text x="-44" y="440" text-anchor="middle" fill="white" font-size="8" font-weight="700">Berubari (1960)</text>
+        <text x="-44" y="453" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Not part → Key to makers</text>
+
+        <rect x="-100" y="468" width="112" height="32" rx="7" fill="#5a4200"/>
+        <text x="-44" y="480" text-anchor="middle" fill="white" font-size="8" font-weight="700">Kesavananda (1973)</text>
+        <text x="-44" y="493" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Part of Const. Basic Struct.</text>
+
+        <rect x="-100" y="508" width="112" height="32" rx="7" fill="#5a4200"/>
+        <text x="-44" y="520" text-anchor="middle" fill="white" font-size="8" font-weight="700">LIC Case (1995)</text>
+        <text x="-44" y="533" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Reaffirmed Kesavananda</text>
+
+        <!-- ===== BRANCH 4: RIGHT-TOP — Objectives (blue) ===== -->
+        <rect x="730" y="183" width="180" height="54" rx="11" fill="#1a4e8a"/>
+        <text x="820" y="204" text-anchor="middle" fill="white" font-size="11" font-weight="700">Objectives (JLEF)</text>
+        <text x="820" y="220" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8.5">Justice·Liberty·Equality·Fraternity</text>
+        <text x="820" y="232" text-anchor="middle" fill="#aad4ff" font-size="8">French Revolution borrowed</text>
+
+        <rect x="888" y="128" width="110" height="32" rx="7" fill="#0d3366"/>
+        <text x="943" y="140" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">Justice</text>
+        <text x="943" y="153" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Social, Economic, Political</text>
+
+        <rect x="888" y="183" width="110" height="32" rx="7" fill="#0d3366"/>
+        <text x="943" y="195" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">Liberty</text>
+        <text x="943" y="208" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Thought, Expression, Belief</text>
+
+        <rect x="888" y="238" width="110" height="32" rx="7" fill="#0d3366"/>
+        <text x="943" y="250" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">Equality &amp; Fraternity</text>
+        <text x="943" y="263" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Status, Opportunity, Unity</text>
+
+        <!-- ===== BRANCH 5: RIGHT-BOTTOM — Amendment (purple) ===== -->
+        <rect x="730" y="462" width="180" height="56" rx="11" fill="#6a1a8a"/>
+        <text x="820" y="482" text-anchor="middle" fill="white" font-size="11" font-weight="700">42nd Amendment</text>
+        <text x="820" y="498" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="8.5">1976 · Emergency Era</text>
+        <text x="820" y="511" text-anchor="middle" fill="#ddb0ff" font-size="8">Indira Gandhi Government</text>
+
+        <rect x="888" y="412" width="110" height="32" rx="7" fill="#4a0068"/>
+        <text x="943" y="424" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">→ Socialist</text>
+        <text x="943" y="437" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Fabian/Welfare State</text>
+
+        <rect x="888" y="462" width="110" height="32" rx="7" fill="#4a0068"/>
+        <text x="943" y="474" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">→ Secular</text>
+        <text x="943" y="487" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Principled Distance</text>
+
+        <rect x="888" y="512" width="110" height="32" rx="7" fill="#4a0068"/>
+        <text x="943" y="524" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">→ Integrity</text>
+        <text x="943" y="537" text-anchor="middle" fill="rgba(255,255,255,0.75)" font-size="7.5">Counter secessionism</text>
+
+        <!-- ===== BRANCH 6: BOTTOM — Key Dates (red) ===== -->
+        <rect x="355" y="552" width="190" height="46" rx="11" fill="#8b1a1a"/>
+        <text x="450" y="572" text-anchor="middle" fill="white" font-size="11" font-weight="700">Key Dates</text>
+        <text x="450" y="587" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-size="9">Objectives Resolution → Preamble</text>
+
+        <rect x="230" y="617" width="130" height="36" rx="8" fill="#6b1010"/>
+        <text x="295" y="631" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">22 Jan 1947</text>
+        <text x="295" y="645" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7.5">Objectives Resolution adopted</text>
+
+        <rect x="385" y="620" width="130" height="36" rx="8" fill="#6b1010"/>
+        <text x="450" y="634" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">26 Nov 1949</text>
+        <text x="450" y="648" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7.5">Constitution Day (Adopted)</text>
+
+        <rect x="540" y="617" width="130" height="36" rx="8" fill="#6b1010"/>
+        <text x="605" y="631" text-anchor="middle" fill="white" font-size="8.5" font-weight="700">26 Jan 1950</text>
+        <text x="605" y="645" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-size="7.5">Republic Day (In Force)</text>
+
+      </svg>
+
+      <div class="mm-legend">
+        <div class="mm-legend-item"><div class="mm-legend-dot" style="background:#FF9933;"></div>Source of Authority</div>
+        <div class="mm-legend-item"><div class="mm-legend-dot" style="background:#138808;"></div>Nature of State</div>
+        <div class="mm-legend-item"><div class="mm-legend-dot" style="background:#D4A017;"></div>Supreme Court Cases</div>
+        <div class="mm-legend-item"><div class="mm-legend-dot" style="background:#4a90d9;"></div>Objectives</div>
+        <div class="mm-legend-item"><div class="mm-legend-dot" style="background:#9b59b6;"></div>42nd Amendment</div>
+        <div class="mm-legend-item"><div class="mm-legend-dot" style="background:#e74c3c;"></div>Key Dates</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="text-align:center;padding:30px 0 10px;color:#888;font-size:0.82rem;font-family:'Lato',sans-serif;">
+    <div style="font-family:'Cinzel',serif;color:var(--saffron);font-size:1rem;margin-bottom:6px;">जय हिन्द · Jai Hind</div>
+    Comprehensive Notes — Preamble of the Indian Constitution · For UPSC Civil Services Preparation
+  </div>
+
+</div><!-- /container -->
+</body>
+</html>
