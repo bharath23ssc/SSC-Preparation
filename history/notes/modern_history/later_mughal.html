@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern Indian History — UPSC Visual Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Barlow+Condensed:wght@300;400;600;700;800&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0e0c0a;
+  --bg2: #14110d;
+  --bg3: #1c1710;
+  --gold: #c9962a;
+  --gold-light: #f0c84a;
+  --amber: #e07b20;
+  --cream: #f5ead8;
+  --muted: #a89878;
+  --red: #c0392b;
+  --green: #1d7a45;
+  --blue: #1a5f9e;
+  --purple: #6b3fa0;
+  --border: rgba(201,150,42,0.25);
+  --shadow: 0 8px 40px rgba(0,0,0,0.5);
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  background: var(--bg);
+  color: var(--cream);
+  overflow-x: hidden;
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 340px;
+  background: linear-gradient(160deg, #1a0e04 0%, #0e0c0a 50%, #050811 100%);
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 60px 24px 50px;
+  overflow: hidden;
+  border-bottom: 1px solid var(--border);
+}
+.hero-bg-text {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(80px, 18vw, 220px);
+  font-weight: 800;
+  color: rgba(201,150,42,0.04);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -4px;
+  user-select: none;
+}
+.hero-tag {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--border);
+  padding: 5px 18px;
+  border-radius: 30px;
+  margin-bottom: 20px;
+  animation: fadeup 0.8s ease both;
+}
+.hero h1 {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(2rem, 5.5vw, 4rem);
+  font-weight: 800;
+  color: var(--cream);
+  text-align: center;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  animation: fadeup 0.9s ease both;
+}
+.hero h1 span { color: var(--gold-light); font-style: italic; }
+.hero-sub {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-weight: 300;
+  letter-spacing: 1px;
+  animation: fadeup 1s ease both;
+}
+.hero-pills {
+  display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;
+  margin-top: 28px;
+  animation: fadeup 1.1s ease both;
+}
+.hero-pill {
+  background: rgba(201,150,42,0.1);
+  border: 1px solid var(--border);
+  color: var(--gold-light);
+  padding: 6px 18px;
+  border-radius: 6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@keyframes fadeup { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: none; } }
+
+/* ── TOC ── */
+.toc-bar {
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  padding: 0 24px;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.toc-bar::-webkit-scrollbar { display: none; }
+.toc-link {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-decoration: none;
+  padding: 14px 18px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  transition: all 0.2s;
+  font-weight: 600;
+}
+.toc-link:hover { color: var(--gold-light); border-bottom-color: var(--gold); }
+
+/* ── CONTAINER ── */
+.container { max-width: 1120px; margin: 0 auto; padding: 0 20px 80px; }
+
+/* ── SECTION TITLES ── */
+.sec-head {
+  display: flex; align-items: center; gap: 16px;
+  margin: 64px 0 30px;
+}
+.sec-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  background: rgba(201,150,42,0.1);
+  border: 1px solid var(--border);
+  padding: 4px 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+}
+.sec-head h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: -0.5px;
+}
+.sec-head::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--border), transparent);
+}
+
+/* ── BIG PICTURE — 4 UNIT FLOW ── */
+.unit-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.unit-box {
+  padding: 28px 22px;
+  position: relative;
+  border-right: 1px solid var(--border);
+  transition: background 0.3s;
+}
+.unit-box:last-child { border-right: none; }
+.unit-box:hover { background: rgba(201,150,42,0.05); }
+.unit-arrow {
+  position: absolute; right: -1px; top: 50%;
+  transform: translateY(-50%);
+  width: 0; height: 0;
+  border-top: 14px solid transparent;
+  border-bottom: 14px solid transparent;
+  border-left: 14px solid var(--border);
+  z-index: 2;
+}
+.unit-box:last-child .unit-arrow { display: none; }
+.unit-icon { font-size: 2rem; margin-bottom: 10px; }
+.unit-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px; font-weight: 600;
+}
+.unit-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem; font-weight: 700; color: var(--cream);
+  margin-bottom: 6px;
+}
+.unit-sub { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+/* ── TIMELINE ── */
+.timeline { position: relative; padding-left: 32px; }
+.timeline::before {
+  content: '';
+  position: absolute; left: 10px; top: 0; bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--amber), transparent);
+}
+.tl-item {
+  position: relative;
+  padding: 0 0 32px 24px;
+}
+.tl-item::before {
+  content: '';
+  position: absolute; left: -22px; top: 6px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  box-shadow: 0 0 0 3px rgba(201,150,42,0.2);
+}
+.tl-year {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-light); font-weight: 700; margin-bottom: 6px;
+}
+.tl-title {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.1rem; font-weight: 700; color: var(--cream);
+  margin-bottom: 6px;
+}
+.tl-body { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+.tl-body strong { color: var(--cream); font-weight: 600; }
+.tl-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.tl-tag {
+  background: rgba(201,150,42,0.1); border: 1px solid var(--border);
+  color: var(--gold); font-size: 0.72rem; padding: 3px 10px; border-radius: 4px;
+  font-family: 'Barlow Condensed', sans-serif; letter-spacing: 1px; text-transform: uppercase;
+}
+
+/* ── KING CARDS ── */
+.king-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px; }
+.king-card {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px;
+  transition: border-color 0.3s, transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+.king-card::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; height:3px;
+  background: linear-gradient(to right, var(--gold), var(--amber));
+}
+.king-card:hover { border-color: var(--gold); transform: translateY(-3px); }
+.king-year {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.7rem; letter-spacing: 2px; color: var(--gold);
+  text-transform: uppercase; margin-bottom: 8px; font-weight: 600;
+}
+.king-name {
+  font-family: 'EB Garamond', serif;
+  font-size: 1.2rem; font-weight: 700; color: var(--cream);
+  margin-bottom: 12px;
+}
+.king-facts { list-style: none; }
+.king-facts li {
+  font-size: 0.83rem; color: var(--muted); padding: 5px 0;
+  border-bottom: 1px solid rgba(201,150,42,0.1);
+  line-height: 1.55;
+}
+.king-facts li:last-child { border-bottom: none; }
+.king-facts li::before { content: '›  '; color: var(--gold); font-weight: 700; }
+.king-facts strong { color: #e8d5a0; }
+
+/* ── FLOWCHART CARDS ── */
+.flow-container {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px;
+  overflow-x: auto;
+}
+.flow-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); text-align: center; margin-bottom: 28px; font-weight: 600;
+}
+
+/* ── SVG FLOWCHARTS ── */
+.diag-svg { display: block; margin: 0 auto; overflow: visible; }
+
+/* Node styles */
+.n-base { fill: var(--bg3); stroke: rgba(201,150,42,0.4); stroke-width: 1.5; rx: 10; }
+.n-gold { fill: rgba(201,150,42,0.15); stroke: var(--gold); stroke-width: 2; }
+.n-red { fill: rgba(192,57,43,0.15); stroke: #c0392b; stroke-width: 1.5; }
+.n-green { fill: rgba(29,122,69,0.15); stroke: #1d7a45; stroke-width: 1.5; }
+.n-blue { fill: rgba(26,95,158,0.15); stroke: #1a5f9e; stroke-width: 1.5; }
+.n-purple { fill: rgba(107,63,160,0.15); stroke: #6b3fa0; stroke-width: 1.5; }
+.n-center { fill: #c9962a; stroke: none; }
+
+text.lab { fill: var(--cream); font-family: 'Barlow', sans-serif; font-size: 11px; }
+text.lab-sm { fill: var(--muted); font-family: 'Barlow', sans-serif; font-size: 9.5px; }
+text.lab-title { fill: var(--gold-light); font-family: 'Barlow Condensed', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; }
+text.lab-center { fill: white; font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; }
+.arrow-line { stroke: rgba(201,150,42,0.5); stroke-width: 1.8; fill: none; }
+.arrow-line-red { stroke: rgba(192,57,43,0.6); stroke-width: 1.5; fill: none; }
+.arrow-line-green { stroke: rgba(29,122,69,0.6); stroke-width: 1.5; fill: none; }
+
+/* ── EXAM TRAP ── */
+.trap-box {
+  background: linear-gradient(135deg, rgba(192,57,43,0.1), rgba(201,150,42,0.08));
+  border: 1px solid rgba(192,57,43,0.4);
+  border-radius: 16px;
+  padding: 28px 32px;
+}
+.trap-label {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem; letter-spacing: 4px; text-transform: uppercase;
+  color: #e74c3c; font-weight: 700; margin-bottom: 16px;
+}
+.trap-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.trap-col { background: var(--bg2); border-radius: 10px; padding: 20px; border: 1px solid var(--border); }
+.trap-col h4 { font-family: 'EB Garamond', serif; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 10px; font-weight: 700; }
+.trap-col p { font-size: 0.85rem; color: var(--muted); line-height: 1.7; }
+.trap-col .correct { color: #2ecc71; font-weight: 700; }
+.trap-col .wrong { color: #e74c3c; font-weight: 700; }
+
+/* ── FACTS TABLE ── */
+.facts-table { width: 100%; border-collapse: collapse; }
+.facts-table thead tr th {
+  background: rgba(201,150,42,0.15);
+  border-bottom: 2px solid var(--gold);
+  padding: 12px 16px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold-light); font-weight: 600; text-align: left;
+}
+.facts-table tbody tr td {
+  padding: 11px 16px;
+  border-bottom: 1px solid rgba(201,150,42,0.1);
+  font-size: 0.86rem; color: var(--muted); line-height: 1.5; vertical-align: top;
+}
+.facts-table tbody tr:hover td { background: rgba(201,150,42,0.04); }
+.facts-table tbody tr td:first-child { color: var(--gold); font-weight: 700; font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; letter-spacing: 1px; white-space: nowrap; }
+.facts-table tbody tr td:nth-child(2) { color: var(--cream); font-weight: 500; }
+
+/* ── MIND MAP ── */
+.mindmap-wrap {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 36px 24px 40px;
+  overflow-x: auto;
+}
+.mindmap-header {
+  text-align: center;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.68rem; letter-spacing: 5px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 32px; font-weight: 600;
+}
+
+/* ── STORY FLOW ── */
+.story-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+  padding-left: 24px;
+}
+.story-flow::before {
+  content: '';
+  position: absolute; left: 10px; top: 24px; bottom: 24px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--gold), var(--blue), var(--green));
+}
+.sf-item {
+  display: flex; gap: 20px; align-items: flex-start;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(201,150,42,0.08);
+}
+.sf-item:last-child { border-bottom: none; }
+.sf-dot {
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 9px; color: #0e0c0a; font-weight: 900;
+  margin-left: -32px;
+  margin-top: 2px;
+  border: 2px solid var(--bg2);
+}
+.sf-content { flex: 1; }
+.sf-year { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; font-weight: 700; }
+.sf-title { font-family: 'EB Garamond', serif; font-size: 1rem; font-weight: 700; color: var(--cream); margin: 3px 0; }
+.sf-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+.sf-arrow { text-align: left; padding-left: 8px; color: var(--amber); font-size: 1.2rem; }
+
+/* ── NADIR SHAH BOX ── */
+.loot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 14px; margin-top: 16px; }
+.loot-item {
+  background: rgba(192,57,43,0.12);
+  border: 1px solid rgba(192,57,43,0.3);
+  border-radius: 10px; padding: 18px;
+}
+.loot-item .li-icon { font-size: 1.8rem; margin-bottom: 8px; }
+.loot-item h4 { font-family: 'EB Garamond', serif; font-size: 0.95rem; color: #e8b0a8; margin-bottom: 4px; font-weight: 700; }
+.loot-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+.impact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 14px; margin-top: 16px; }
+.impact-item {
+  background: rgba(107,63,160,0.12);
+  border: 1px solid rgba(107,63,160,0.3);
+  border-radius: 10px; padding: 18px;
+}
+.impact-item h4 { font-size: 0.85rem; color: #c9a8e8; margin-bottom: 4px; font-weight: 600; }
+.impact-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+/* ── UNIT PREVIEWS ── */
+.unit-preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 20px; }
+.unit-preview {
+  background: var(--bg2); border: 1px solid var(--border);
+  border-radius: 14px; padding: 24px; overflow: hidden; position: relative;
+}
+.unit-preview::after {
+  content: attr(data-unit);
+  position: absolute; right: -10px; bottom: -20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 6rem; font-weight: 800; color: rgba(201,150,42,0.05);
+  line-height: 1; pointer-events: none;
+}
+.up-label { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+.up-title { font-family: 'EB Garamond', serif; font-size: 1.15rem; font-weight: 700; color: var(--cream); margin-bottom: 14px; }
+.up-list { list-style: none; }
+.up-list li { font-size: 0.82rem; color: var(--muted); padding: 4px 0; border-bottom: 1px solid rgba(201,150,42,0.08); }
+.up-list li:last-child { border-bottom: none; }
+.up-list li::before { content: '— '; color: var(--gold); }
+
+/* ── SUMMARY BANNER ── */
+.summary-banner {
+  background: linear-gradient(135deg, #1a0e04, #050811);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  margin-top: 60px;
+  position: relative;
+  overflow: hidden;
+}
+.summary-banner::before {
+  content: '🇮🇳';
+  position: absolute; right: 30px; top: 50%; transform: translateY(-50%);
+  font-size: 100px; opacity: 0.05;
+}
+.summary-banner h3 { font-family: 'EB Garamond', serif; font-size: 1.6rem; color: var(--gold-light); margin-bottom: 14px; font-style: italic; }
+.summary-banner p { font-size: 0.92rem; color: var(--muted); line-height: 1.9; max-width: 700px; margin: 0 auto; }
+.summary-banner strong { color: var(--cream); }
+
+/* ── GANTT-STYLE EMPEROR BAR ── */
+.gantt-wrap { overflow-x: auto; }
+.gantt-svg { display: block; }
+
+/* ── IJARA BOX ── */
+.ijara-flow {
+  display: flex; gap: 0; align-items: stretch;
+  background: var(--bg2); border: 1px solid var(--border); border-radius: 14px;
+  overflow: hidden;
+}
+.ij-step {
+  flex: 1; padding: 24px 20px; text-align: center;
+  border-right: 1px solid var(--border);
+  position: relative;
+}
+.ij-step:last-child { border-right: none; }
+.ij-step::after {
+  content: '→';
+  position: absolute; right: -14px; top: 50%; transform: translateY(-50%);
+  color: var(--gold); font-size: 1.2rem; z-index: 2;
+  background: var(--bg2); padding: 2px;
+}
+.ij-step:last-child::after { display: none; }
+.ij-icon { font-size: 1.8rem; margin-bottom: 10px; }
+.ij-title { font-family: 'EB Garamond', serif; font-size: 0.95rem; font-weight: 700; color: var(--cream); margin-bottom: 6px; }
+.ij-desc { font-size: 0.78rem; color: var(--muted); line-height: 1.5; }
+.ij-impact {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 18px;
+}
+.ij-pos { background: rgba(29,122,69,0.12); border: 1px solid rgba(29,122,69,0.3); border-radius: 10px; padding: 16px; }
+.ij-neg { background: rgba(192,57,43,0.12); border: 1px solid rgba(192,57,43,0.3); border-radius: 10px; padding: 16px; }
+.ij-pos h4 { color: #2ecc71; font-size: 0.83rem; margin-bottom: 6px; font-weight: 700; }
+.ij-neg h4 { color: #e74c3c; font-size: 0.83rem; margin-bottom: 6px; font-weight: 700; }
+.ij-pos p, .ij-neg p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+/* ── REGIONAL STATES ── */
+.rs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.rs-col { background: var(--bg2); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+.rs-col-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); font-weight: 700; margin-bottom: 12px; }
+.rs-item { margin-bottom: 12px; }
+.rs-item h4 { font-family: 'EB Garamond', serif; font-size: 0.98rem; font-weight: 700; color: var(--cream); margin-bottom: 4px; }
+.rs-item p { font-size: 0.8rem; color: var(--muted); line-height: 1.5; }
+
+/* ── RACE BOX ── */
+.race-split { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.race-indian { background: rgba(29,122,69,0.08); border: 1px solid rgba(29,122,69,0.3); border-radius: 14px; padding: 24px; }
+.race-european { background: rgba(26,95,158,0.08); border: 1px solid rgba(26,95,158,0.3); border-radius: 14px; padding: 24px; }
+.race-title { font-family: 'Barlow Condensed', sans-serif; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; }
+.race-indian .race-title { color: #2ecc71; }
+.race-european .race-title { color: #5dade2; }
+.race-item { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 10px; }
+.race-item-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; }
+.race-item-text h4 { font-size: 0.88rem; color: var(--cream); font-weight: 600; margin-bottom: 2px; }
+.race-item-text p { font-size: 0.78rem; color: var(--muted); line-height: 1.4; }
+.race-verdict {
+  background: rgba(201,150,42,0.08); border: 1px solid var(--border);
+  border-radius: 12px; padding: 20px; margin-top: 20px; text-align: center;
+}
+.race-verdict h3 { font-family: 'EB Garamond', serif; font-size: 1.1rem; color: var(--gold-light); margin-bottom: 6px; }
+.race-verdict p { font-size: 0.82rem; color: var(--muted); line-height: 1.5; }
+
+@media (max-width: 700px) {
+  .unit-flow { grid-template-columns: 1fr 1fr; }
+  .trap-grid { grid-template-columns: 1fr; }
+  .rs-grid { grid-template-columns: 1fr; }
+  .race-split { grid-template-columns: 1fr; }
+  .ijara-flow { flex-direction: column; }
+  .ij-step::after { content: '↓'; right: 50%; bottom: -14px; top: auto; transform: translateX(50%); }
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ HERO ═══ -->
+<div class="hero">
+  <div class="hero-bg-text">INDIA</div>
+  <div class="hero-tag">UPSC Prelims · GS Paper I</div>
+  <h1>Modern <span>Indian History</span></h1>
+  <div class="hero-sub">Visual Class Notes &nbsp;·&nbsp; Marathon Session &nbsp;·&nbsp; Quick Revision</div>
+  <div class="hero-pills">
+    <span class="hero-pill">Unit 1 — British Conquest</span>
+    <span class="hero-pill">Unit 2 — Colonial Exploitation</span>
+    <span class="hero-pill">Unit 3 — Revolts</span>
+    <span class="hero-pill">Unit 4 — Freedom Struggle</span>
+    <span class="hero-pill">1707 → 1947</span>
+  </div>
+</div>
+
+<!-- ═══ TOC ═══ -->
+<nav class="toc-bar">
+  <a href="#bigpicture" class="toc-link">Big Picture</a>
+  <a href="#timeline" class="toc-link">Timeline</a>
+  <a href="#kings" class="toc-link">Later Mughals</a>
+  <a href="#nobles" class="toc-link">Era of Nobles</a>
+  <a href="#ijara" class="toc-link">Ijara System</a>
+  <a href="#nadir" class="toc-link">Nadir Shah</a>
+  <a href="#regional" class="toc-link">Regional States</a>
+  <a href="#race" class="toc-link">Race for Power</a>
+  <a href="#examtrap" class="toc-link">Exam Trap</a>
+  <a href="#factable" class="toc-link">Key Facts</a>
+  <a href="#storyflow" class="toc-link">Story Flow</a>
+  <a href="#mindmap" class="toc-link">Mind Map</a>
+</nav>
+
+<div class="container">
+
+  <!-- ═══ BIG PICTURE ═══ -->
+  <div id="bigpicture">
+    <div class="sec-head"><span class="sec-num">Overview</span><h2>The Big Picture — 4 Units at a Glance</h2></div>
+    <div class="unit-flow">
+      <div class="unit-box">
+        <div class="unit-arrow"></div>
+        <div class="unit-icon">🏰</div>
+        <div class="unit-num">Unit 1</div>
+        <div class="unit-title">British Conquest</div>
+        <div class="unit-sub">18th Century India — Mughal decline, successor states, European entry</div>
+      </div>
+      <div class="unit-box">
+        <div class="unit-arrow"></div>
+        <div class="unit-icon">💰</div>
+        <div class="unit-num">Unit 2</div>
+        <div class="unit-title">Colonial Exploitation</div>
+        <div class="unit-sub">Drain Theory, land revenue systems, destruction of Indian industries</div>
+      </div>
+      <div class="unit-box">
+        <div class="unit-arrow"></div>
+        <div class="unit-icon">⚔️</div>
+        <div class="unit-num">Unit 3</div>
+        <div class="unit-title">Early Reactions</div>
+        <div class="unit-sub">Peasant revolts, tribal rebellions, Revolt of 1857 — First War of Independence</div>
+      </div>
+      <div class="unit-box">
+        <div class="unit-icon">🇮🇳</div>
+        <div class="unit-num">Unit 4</div>
+        <div class="unit-title">Freedom Struggle</div>
+        <div class="unit-sub">INC 1885 → Moderates → Extremists → Gandhi → Independence 1947</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TIMELINE ═══ -->
+  <div id="timeline">
+    <div class="sec-head"><span class="sec-num">Unit 1</span><h2>Timeline — Decline of Mughal Empire (1707–1857)</h2></div>
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-year">1707</div>
+        <div class="tl-title">Death of Aurangzeb — Decline Begins</div>
+        <div class="tl-body">Political and economic weaknesses of the Mughal Empire surface. The <strong>150-year decline</strong> from Mughal power to complete disappearance begins.</div>
+        <div class="tl-tags"><span class="tl-tag">Turning Point</span><span class="tl-tag">Political Weakness</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1707 — 1712</div>
+        <div class="tl-title">Bahadur Shah I (Muazzam)</div>
+        <div class="tl-body">Muazzam wins the war of succession, takes title <strong>Bahadur Shah I</strong>, also called <em>Shah Bekhhabar</em>. Reversed some of Aurangzeb's policies. Died in 1712 — era of powerful nobles begins.</div>
+        <div class="tl-tags"><span class="tl-tag">Shah Bekhhabar</span><span class="tl-tag">War of Succession</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1712 — 1719</div>
+        <div class="tl-title">Era of Nobles — Sayyid Brothers as Kingmakers</div>
+        <div class="tl-body">Emperors become <strong>puppets of nobles</strong>. Jahandar Shah (1712–13), then Farrukh Siyar (1713–19) — both controlled by powerful nobles. The <strong>Sayyid Brothers</strong> (Abdullah Khan + Hussain Ali Khan) control the throne.</div>
+        <div class="tl-tags"><span class="tl-tag">Sayyid Brothers</span><span class="tl-tag">Puppet Emperors</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1719 — 1748</div>
+        <div class="tl-title">Muhammad Shah Rangila — Last Chance, FAILED</div>
+        <div class="tl-body">Real name: <strong>Roshan Akhtar</strong>. Removed Sayyid Brothers with Nizam-ul-Mulk's help (1720). Had a real chance to save the empire but was pleasure-loving and erratic. Defeated by Nadir Shah in 1739.</div>
+        <div class="tl-tags"><span class="tl-tag">Roshan Akhtar</span><span class="tl-tag">Rangila</span><span class="tl-tag">Last Chance</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1724</div>
+        <div class="tl-title">Hyderabad Founded — First Break-up</div>
+        <div class="tl-body"><strong>Nizam-ul-Mulk</strong> (also called Asaf Jah) founds Hyderabad as an independent state. <strong>Physical disintegration of the Mughal Empire begins</strong>.</div>
+        <div class="tl-tags"><span class="tl-tag">Asaf Jah</span><span class="tl-tag">Physical Disintegration</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1739</div>
+        <div class="tl-title">Nadir Shah Invasion — Battle of Karnal</div>
+        <div class="tl-body">Nadir Shah invades India, defeats Muhammad Shah Rangila at the <strong>Battle of Karnal</strong>. Loots Delhi — takes <strong>Koh-i-Noor diamond</strong>, <strong>Peacock Throne (Takht-e-Taus)</strong>, and <strong>70 crore rupees</strong>. Hidden Mughal weakness is now <strong>EXPOSED to the world</strong>.</div>
+        <div class="tl-tags"><span class="tl-tag">Koh-i-Noor</span><span class="tl-tag">Peacock Throne</span><span class="tl-tag">70 Crore Rupees</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1748 — 1761</div>
+        <div class="tl-title">Ahmad Shah Abdali — Repeated Afghan Invasions</div>
+        <div class="tl-body">Multiple invasions by Abdali (also called Durrani). Northwest frontier lost. Culminates in the <strong>Third Battle of Panipat (1761)</strong> where Abdali defeats the Marathas — preventing them from filling the power vacuum.</div>
+        <div class="tl-tags"><span class="tl-tag">Afghan Invasions</span><span class="tl-tag">3rd Panipat 1761</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1757</div>
+        <div class="tl-title">Battle of Plassey — British Become Political Power</div>
+        <div class="tl-body"><strong>Robert Clive</strong> defeats <strong>Siraj-ud-Daulah</strong>. British transition from traders to political masters of India. This is the turning point for British political control.</div>
+        <div class="tl-tags"><span class="tl-tag">Robert Clive</span><span class="tl-tag">Siraj-ud-Daulah</span><span class="tl-tag">British Rule Begins</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1803</div>
+        <div class="tl-title">Delhi Captured — Mughal Emperor Becomes British Pensioner</div>
+        <div class="tl-body">British capture Delhi. <strong>Shah Alam II</strong> becomes a British pensioner. Mughal sovereignty is completely lost.</div>
+        <div class="tl-tags"><span class="tl-tag">Shah Alam II</span><span class="tl-tag">Sovereignty Lost</span></div>
+      </div>
+      <div class="tl-item">
+        <div class="tl-year">1857</div>
+        <div class="tl-title">Revolt of 1857 — Mughal Empire Officially Ends</div>
+        <div class="tl-body"><strong>Bahadur Shah Zafar II</strong>, the last Mughal Emperor, leads the revolt. After suppression, he is exiled to Rangoon. The <strong>Mughal Empire officially ends</strong> after 150 years of decline.</div>
+        <div class="tl-tags"><span class="tl-tag">Bahadur Shah Zafar II</span><span class="tl-tag">End of Mughal Era</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ LATER MUGHAL KINGS — GANTT STYLE ═══ -->
+  <div id="kings">
+    <div class="sec-head"><span class="sec-num">Reference</span><h2>Later Mughal Emperors — Emperor Timeline (1707–1857)</h2></div>
+    <div class="flow-container" style="padding:28px 20px;">
+      <div class="gantt-wrap">
+        <svg class="gantt-svg" viewBox="0 0 920 340" xmlns="http://www.w3.org/2000/svg" style="min-width:680px;">
+          <defs>
+            <linearGradient id="barGold" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="#c9962a"/>
+              <stop offset="100%" stop-color="#e07b20"/>
+            </linearGradient>
+            <linearGradient id="barAmber" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="#8b4513"/>
+              <stop offset="100%" stop-color="#a0522d"/>
+            </linearGradient>
+          </defs>
+          <!-- Year axis labels -->
+          <text x="160" y="16" fill="#a89878" font-size="9" font-family="'Barlow Condensed',sans-serif" letter-spacing="1" text-anchor="middle">1707</text>
+          <text x="248" y="16" fill="#a89878" font-size="9" font-family="'Barlow Condensed',sans-serif" letter-spacing="1" text-anchor="middle">1730</text>
+          <text x="352" y="16" fill="#a89878" font-size="9" font-family="'Barlow Condensed',sans-serif" letter-spacing="1" text-anchor="middle">1757</text>
+          <text x="460" y="16" fill="#a89878" font-size="9" font-family="'Barlow Condensed',sans-serif" letter-spacing="1" text-anchor="middle">1785</text>
+          <text x="580" y="16" fill="#a89878" font-size="9" font-family="'Barlow Condensed',sans-serif" letter-spacing="1" text-anchor="middle">1816</text>
+          <text x="718" y="16" fill="#a89878" font-size="9" font-family="'Barlow Condensed',sans-serif" letter-spacing="1" text-anchor="middle">1850</text>
+          <text x="780" y="16" fill="#a89878" font-size="9" font-family="'Barlow Condensed',sans-serif" letter-spacing="1" text-anchor="middle">1857</text>
+
+          <!-- Grid lines -->
+          <line x1="160" y1="22" x2="160" y2="330" stroke="rgba(201,150,42,0.12)" stroke-width="1"/>
+          <line x1="248" y1="22" x2="248" y2="330" stroke="rgba(201,150,42,0.08)" stroke-width="1"/>
+          <line x1="352" y1="22" x2="352" y2="330" stroke="rgba(201,150,42,0.1)" stroke-width="1"/>
+          <line x1="460" y1="22" x2="460" y2="330" stroke="rgba(201,150,42,0.08)" stroke-width="1"/>
+          <line x1="580" y1="22" x2="580" y2="330" stroke="rgba(201,150,42,0.08)" stroke-width="1"/>
+          <line x1="780" y1="22" x2="780" y2="330" stroke="rgba(192,57,43,0.3)" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+          <!-- Scale: 1707=160px, 1857=780px → 620px / 150 years = 4.133px/year -->
+          <!-- offset(year) = 160 + (year-1707)*4.133 -->
+
+          <!-- Bahadur Shah I: 1707–1712 → 160 to 181 (21px) -->
+          <rect x="160" y="36" width="21" height="22" rx="4" fill="url(#barGold)"/>
+          <text x="96" y="51" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Bahadur Shah I</text>
+          <text x="100" y="51" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1707–12 · Shah Bekhhabar</text>
+
+          <!-- Jahandar Shah: 1712–1713 → 181 to 185 (4px) -->
+          <rect x="181" y="68" width="5" height="22" rx="2" fill="#8b4513"/>
+          <text x="96" y="83" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Jahandar Shah</text>
+          <text x="100" y="83" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1712–13 · Puppet of Zulfiqar Khan</text>
+
+          <!-- Farrukh Siyar: 1713–1719 → 185 to 210 (25px) -->
+          <rect x="186" y="100" width="25" height="22" rx="4" fill="url(#barAmber)"/>
+          <text x="96" y="115" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Farrukh Siyar</text>
+          <text x="100" y="115" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1713–19 · Deposed by Sayyid Brothers</text>
+
+          <!-- Muhammad Shah Rangila: 1719–1748 → 211 to 331 (120px) -->
+          <rect x="211" y="132" width="120" height="22" rx="4" fill="url(#barGold)"/>
+          <text x="96" y="147" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Muhammad Shah</text>
+          <text x="100" y="147" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1719–48 · Rangila · Last chance FAILED</text>
+
+          <!-- Ahmad Shah: 1748–1754 → 331 to 356 (25px) -->
+          <rect x="331" y="164" width="25" height="22" rx="4" fill="#5a3010"/>
+          <text x="96" y="179" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Ahmad Shah</text>
+          <text x="100" y="179" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1748–54</text>
+
+          <!-- Alamgir II: 1754–1759 → 356 to 377 (21px) -->
+          <rect x="356" y="196" width="21" height="22" rx="4" fill="#5a3010"/>
+          <text x="96" y="211" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Alamgir II</text>
+          <text x="100" y="211" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1754–59</text>
+
+          <!-- Shah Alam II: 1759–1806 → 377 to 581 (204px) -->
+          <rect x="377" y="228" width="204" height="22" rx="4" fill="url(#barAmber)"/>
+          <text x="96" y="243" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Shah Alam II</text>
+          <text x="100" y="243" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1759–1806 · British pensioner by 1803</text>
+
+          <!-- Akbar Shah II: 1806–1837 → 581 to 705 (124px) -->
+          <rect x="581" y="260" width="124" height="22" rx="4" fill="url(#barGold)" opacity="0.7"/>
+          <text x="96" y="275" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Akbar Shah II</text>
+          <text x="100" y="275" fill="#a89878" font-size="8" font-family="'Barlow',sans-serif">1806–37</text>
+
+          <!-- Bahadur Shah Zafar II: 1837–1857 → 705 to 787 (82px) -->
+          <rect x="705" y="292" width="82" height="22" rx="4" fill="#8b1a1a"/>
+          <text x="96" y="307" fill="#f5ead8" font-size="9.5" font-family="'Barlow',sans-serif" text-anchor="end">Bahadur Shah Zafar II</text>
+          <text x="100" y="307" fill="#e8b0a0" font-size="8" font-family="'Barlow',sans-serif">1837–57 · Last Mughal · Exiled 1857 ⚔</text>
+
+          <!-- 1857 marker -->
+          <text x="780" y="330" fill="#e74c3c" font-size="8" font-family="'Barlow Condensed',sans-serif" text-anchor="middle" letter-spacing="1">REVOLT 1857</text>
+        </svg>
+      </div>
+    </div>
+
+    <!-- King detail cards -->
+    <div class="king-grid" style="margin-top:22px;">
+      <div class="king-card">
+        <div class="king-year">1707 — 1712</div>
+        <div class="king-name">👑 Bahadur Shah I (Muazzam)</div>
+        <ul class="king-facts">
+          <li>Also called <strong>Shah Bekhhabar</strong></li>
+          <li>Became emperor at age <strong>63–65</strong></li>
+          <li>Reversed Aurangzeb's harsh policies</li>
+          <li>Gave <strong>Sardeshmukhi</strong> to Marathas — NOT Chauth</li>
+          <li>Released Shahu from prison</li>
+          <li>Gave mansab to Guru Gobind Singh Ji</li>
+        </ul>
+      </div>
+      <div class="king-card">
+        <div class="king-year">1712 — 1713</div>
+        <div class="king-name">👑 Jahandar Shah</div>
+        <ul class="king-facts">
+          <li>Puppet of <strong>Zulfiqar Khan</strong> (ran actual administration)</li>
+          <li>Pleasure-loving, weak ruler</li>
+          <li>Zulfiqar Khan <strong>abolished Jizya</strong></li>
+          <li>Gave Marathas <strong>both Sardeshmukhi AND Chauth</strong></li>
+          <li>Introduced <strong>Ijara System</strong> (revenue farming)</li>
+          <li>Defeated by Farrukh Siyar at Agra (1713)</li>
+        </ul>
+      </div>
+      <div class="king-card">
+        <div class="king-year">1713 — 1719</div>
+        <div class="king-name">👑 Farrukh Siyar</div>
+        <ul class="king-facts">
+          <li>Made emperor by <strong>Sayyid Brothers</strong></li>
+          <li>Described as: cowardly, cruel, faithless</li>
+          <li>Plotted against his own benefactors</li>
+          <li>Deposed by <strong>Sayyid Brothers + Marathas</strong></li>
+          <li>Balaji Vishwanath (Peshwa) helped in his deposition</li>
+        </ul>
+      </div>
+      <div class="king-card">
+        <div class="king-year">1719 — 1748</div>
+        <div class="king-name">👑 Muhammad Shah Rangila</div>
+        <ul class="king-facts">
+          <li>Real name: <strong>Roshan Akhtar</strong></li>
+          <li><strong>Last real chance to save empire — FAILED</strong></li>
+          <li>Removed Sayyid Brothers with Nizam-ul-Mulk's help (1720)</li>
+          <li>Nizam-ul-Mulk founded Hyderabad (1724)</li>
+          <li>Defeated by <strong>Nadir Shah 1739</strong></li>
+          <li>Pleasure-loving, erratic behavior</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ ERA OF NOBLES ═══ -->
+  <div id="nobles">
+    <div class="sec-head"><span class="sec-num">Unit 1 · Detail</span><h2>Era of Nobles — How Emperors Became Puppets</h2></div>
+    <div class="flow-container">
+      <div class="flow-title">Political Degradation of Mughal Throne · 1712 → 1720</div>
+      <svg class="diag-svg" viewBox="0 0 820 460" xmlns="http://www.w3.org/2000/svg" style="min-width:600px;">
+        <!-- Arrows -->
+        <defs>
+          <marker id="arrowG" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="rgba(201,150,42,0.6)"/></marker>
+          <marker id="arrowR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="rgba(192,57,43,0.6)"/></marker>
+          <marker id="arrowB" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="rgba(26,95,158,0.6)"/></marker>
+        </defs>
+        <!-- Top node -->
+        <rect x="280" y="10" width="260" height="52" rx="10" fill="rgba(192,57,43,0.15)" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="410" y="31" text-anchor="middle" fill="#f5ead8" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">Death of Bahadur Shah I · 1712</text>
+        <text x="410" y="50" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9.5">New political reality: Nobles become Kingmakers</text>
+
+        <line x1="410" y1="62" x2="410" y2="90" stroke="rgba(201,150,42,0.5)" stroke-width="2" marker-end="url(#arrowG)"/>
+
+        <!-- Jahandar Shah box -->
+        <rect x="245" y="92" width="330" height="50" rx="9" fill="rgba(26,95,158,0.12)" stroke="#1a5f9e" stroke-width="1.5"/>
+        <text x="410" y="113" text-anchor="middle" fill="#f5ead8" font-family="'Barlow Condensed',sans-serif" font-size="11.5" font-weight="700">Jahandar Shah 1712–13</text>
+        <text x="410" y="131" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Supported by Zulfiqar Khan · Abolished Jizya · Introduced Ijara System</text>
+
+        <line x1="410" y1="142" x2="410" y2="168" stroke="rgba(201,150,42,0.5)" stroke-width="2" marker-end="url(#arrowG)"/>
+
+        <!-- Sayyid Brothers -->
+        <rect x="245" y="170" width="330" height="50" rx="9" fill="rgba(107,63,160,0.15)" stroke="#6b3fa0" stroke-width="1.5"/>
+        <text x="410" y="191" text-anchor="middle" fill="#f5ead8" font-family="'Barlow Condensed',sans-serif" font-size="11.5" font-weight="700">Farrukh Siyar 1713–19</text>
+        <text x="410" y="209" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Abdullah Khan &amp; Hussain Ali Khan = THE KINGMAKERS · Sayyid Brothers</text>
+
+        <line x1="410" y1="220" x2="410" y2="248" stroke="rgba(201,150,42,0.5)" stroke-width="2" marker-end="url(#arrowG)"/>
+
+        <!-- Deposition -->
+        <rect x="200" y="250" width="420" height="52" rx="9" fill="rgba(192,57,43,0.12)" stroke="#c0392b" stroke-width="1.5"/>
+        <text x="410" y="271" text-anchor="middle" fill="#e8b0a8" font-family="'Barlow Condensed',sans-serif" font-size="11.5" font-weight="700">Sayyid Brothers + Marathas depose Farrukh Siyar · 1719</text>
+        <text x="410" y="290" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Peshwa Balaji Vishwanath provides Maratha military support</text>
+
+        <line x1="410" y1="302" x2="410" y2="328" stroke="rgba(201,150,42,0.5)" stroke-width="2" marker-end="url(#arrowG)"/>
+
+        <!-- Two phantom kings -->
+        <rect x="245" y="330" width="330" height="50" rx="9" fill="rgba(139,69,19,0.2)" stroke="#8b4513" stroke-width="1.5"/>
+        <text x="410" y="350" text-anchor="middle" fill="#f5ead8" font-family="'Barlow Condensed',sans-serif" font-size="11.5" font-weight="700">Two Phantom Kings — Both died of TB</text>
+        <text x="410" y="368" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Rafi-ud-Darajat &amp; Rafi-ud-Daulah — Meaningless brief reigns</text>
+
+        <line x1="410" y1="380" x2="410" y2="406" stroke="rgba(201,150,42,0.5)" stroke-width="2" marker-end="url(#arrowG)"/>
+
+        <!-- Muhammad Shah -->
+        <rect x="245" y="408" width="330" height="44" rx="9" fill="rgba(201,150,42,0.15)" stroke="#c9962a" stroke-width="1.5"/>
+        <text x="410" y="428" text-anchor="middle" fill="#f0c84a" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">Muhammad Shah Rangila · 1719–1748</text>
+        <text x="410" y="446" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Roshan Akhtar · Removed Sayyid Brothers · Last real chance · FAILED</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ═══ IJARA SYSTEM ═══ -->
+  <div id="ijara">
+    <div class="sec-head"><span class="sec-num">Concept</span><h2>Ijara System — Revenue Farming Explained</h2></div>
+    <div class="ijara-flow">
+      <div class="ij-step">
+        <div class="ij-icon">🏛️</div>
+        <div class="ij-title">Mughal State Needs Revenue</div>
+        <div class="ij-desc">The state needs a fixed, reliable income from land tax</div>
+      </div>
+      <div class="ij-step">
+        <div class="ij-icon">📢</div>
+        <div class="ij-title">Land Auctioned to Highest Bidder</div>
+        <div class="ij-desc">Revenue collection rights sold through open auction</div>
+      </div>
+      <div class="ij-step">
+        <div class="ij-icon">💰</div>
+        <div class="ij-title">Bidder Pays Fixed Amount to State</div>
+        <div class="ij-desc">State gets stable income regardless of actual harvest</div>
+      </div>
+      <div class="ij-step">
+        <div class="ij-icon">👨‍🌾</div>
+        <div class="ij-title">Bidder Extracts Maximum from Peasants</div>
+        <div class="ij-desc">To profit, the bidder squeezes as much as possible from cultivators</div>
+      </div>
+    </div>
+    <div class="ij-impact">
+      <div class="ij-pos">
+        <h4>✅ Positive Impact</h4>
+        <p>Stable, predictable income for the State treasury regardless of agricultural conditions</p>
+      </div>
+      <div class="ij-neg">
+        <h4>❌ Negative Impact</h4>
+        <p>Severe exploitation of peasants and cultivators — maximised extraction with no welfare concern</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ NADIR SHAH ═══ -->
+  <div id="nadir">
+    <div class="sec-head"><span class="sec-num">1739</span><h2>Nadir Shah's Invasion — Battle of Karnal</h2></div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:28px;">
+      <div style="display:flex;gap:20px;align-items:center;margin-bottom:24px;flex-wrap:wrap;">
+        <div style="background:rgba(192,57,43,0.15);border:1px solid rgba(192,57,43,0.4);border-radius:12px;padding:16px 24px;text-align:center;">
+          <div style="font-size:2rem;margin-bottom:6px;">⚔️</div>
+          <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:3px;color:#e74c3c;text-transform:uppercase;font-weight:700;">February 1739</div>
+          <div style="font-family:'EB Garamond',serif;font-size:1rem;color:var(--cream);font-weight:700;margin-top:4px;">Battle of Karnal</div>
+        </div>
+        <div style="flex:1;min-width:220px;">
+          <p style="font-size:0.9rem;color:var(--muted);line-height:1.8;"><strong style="color:var(--cream);">Nadir Shah</strong>, ruler of Persia/Iran, invades India and decisively defeats <strong style="color:var(--cream);">Muhammad Shah Rangila</strong>. The battle exposed the hidden weakness of the Mughal Empire to <em>all powers</em> — Indian and European alike.</p>
+        </div>
+      </div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:4px;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px;">💎 LOOT OF DELHI</div>
+      <div class="loot-grid">
+        <div class="loot-item"><div class="li-icon">💎</div><h4>Koh-i-Noor Diamond</h4><p>The legendary diamond taken to Persia</p></div>
+        <div class="loot-item"><div class="li-icon">🦚</div><h4>Peacock Throne (Takht-e-Taus)</h4><p>The iconic jewelled throne of the Mughals</p></div>
+        <div class="loot-item"><div class="li-icon">💰</div><h4>70 Crore Rupees</h4><p>Enormous treasury wealth looted from Delhi</p></div>
+        <div class="loot-item"><div class="li-icon">🗺️</div><h4>Territory West of Indus Ceded</h4><p>Northwest defense line of India permanently lost</p></div>
+      </div>
+      <div style="font-family:'Barlow Condensed',sans-serif;font-size:0.68rem;letter-spacing:4px;text-transform:uppercase;color:#a855f7;font-weight:600;margin:20px 0 14px;">⚡ IMPACT OF INVASION</div>
+      <div class="impact-grid">
+        <div class="impact-item"><h4>Mughal Weakness EXPOSED</h4><p>Indian and European powers now see the empire as vulnerable — opens the floodgates</p></div>
+        <div class="impact-item"><h4>Northwest Frontier Lost</h4><p>Loss of Indus territories removed the natural barrier against further invasions</p></div>
+        <div class="impact-item"><h4>Abdali Invasions Follow</h4><p>Ahmad Shah Abdali launches 8+ invasions from 1748 to 1761, further weakening India</p></div>
+        <div class="impact-item"><h4>Power Vacuum Deepens</h4><p>Marathas and British now race to fill the political vacuum left by Mughal collapse</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ REGIONAL STATES ═══ -->
+  <div id="regional">
+    <div class="sec-head"><span class="sec-num">Post-Mughal</span><h2>Regional States — After Mughal Disintegration</h2></div>
+    <div class="rs-grid">
+      <div class="rs-col">
+        <div class="rs-col-title">Successor States</div>
+        <div class="rs-item"><h4>Bengal</h4><p>Under Murshid Quli Khan — broke away after Nadir Shah's invasion</p></div>
+        <div class="rs-item"><h4>Hyderabad</h4><p>Founded 1724 by <strong>Nizam-ul-Mulk</strong> (Asaf Jah) — first major breakaway state</p></div>
+        <div class="rs-item"><h4>Awadh</h4><p>Under Sa'adat Khan — semi-independent Nawab state in north India</p></div>
+      </div>
+      <div class="rs-col">
+        <div class="rs-col-title">New Independent States</div>
+        <div class="rs-item"><h4>Mysore</h4><p>Rose to prominence under Hyder Ali and Tipu Sultan</p></div>
+        <div class="rs-item"><h4>Kerala</h4><p>Various small independent principalities</p></div>
+        <div class="rs-item"><h4>Marathas ⭐ Most Powerful</h4><p>The strongest Indian power — had real potential to unite and control all of India</p></div>
+      </div>
+      <div class="rs-col">
+        <div class="rs-col-title">Rebellious/New States</div>
+        <div class="rs-item"><h4>Rajputs</h4><p>Reasserted independence in Rajputana region</p></div>
+        <div class="rs-item"><h4>Sikhs</h4><p>After Guru Gobind Singh Ji — Banda Bahadur leads armed resistance in Punjab</p></div>
+        <div class="rs-item"><h4>Jats</h4><p>Dominant in areas around Agra and Mathura</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ RACE FOR POWER ═══ -->
+  <div id="race">
+    <div class="sec-head"><span class="sec-num">Key Question</span><h2>Who Will Fill the Vacuum? — The Race for Power</h2></div>
+    <div style="background:rgba(192,57,43,0.08);border:1px solid rgba(192,57,43,0.3);border-radius:14px;padding:20px 24px;margin-bottom:20px;text-align:center;">
+      <p style="font-family:'EB Garamond',serif;font-size:1.1rem;color:var(--cream);">💥 Mughal Empire collapses — <strong>Political Vacuum Created</strong> — <em>Who fills it?</em></p>
+    </div>
+    <div class="race-split">
+      <div class="race-indian">
+        <div class="race-title">🏹 Indian Powers</div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#2ecc71;"></div>
+          <div class="race-item-text"><h4>Marathas — Most Powerful</h4><p>Could have united India — defeated at 3rd Battle of Panipat (1761) by Ahmad Shah Abdali</p></div>
+        </div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#a89878;"></div>
+          <div class="race-item-text"><h4>Rajputs</h4><p>Strong regionally but no pan-India ambition</p></div>
+        </div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#a89878;"></div>
+          <div class="race-item-text"><h4>Sikhs</h4><p>Rising power in Punjab but limited reach</p></div>
+        </div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#a89878;"></div>
+          <div class="race-item-text"><h4>Regional Nawabs</h4><p>Fragmented, no unified vision</p></div>
+        </div>
+        <div style="margin-top:14px;background:rgba(192,57,43,0.15);border-radius:8px;padding:12px;font-size:0.82rem;color:#e8b0a8;">❌ <strong>Marathas FAIL</strong> — Defeated at Third Battle of Panipat, 1761. No Indian power succeeds in unifying India.</div>
+      </div>
+      <div class="race-european">
+        <div class="race-title">🚢 European Powers</div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#a89878;"></div>
+          <div class="race-item-text"><h4>Portuguese — 1498 (First)</h4><p>Arrived first but couldn't expand due to Mughal power</p></div>
+        </div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#a89878;"></div>
+          <div class="race-item-text"><h4>Dutch</h4><p>Strong traders but limited political ambition in India</p></div>
+        </div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#a89878;"></div>
+          <div class="race-item-text"><h4>French</h4><p>Defeated by British in Carnatic Wars — lost the race</p></div>
+        </div>
+        <div class="race-item">
+          <div class="race-item-dot" style="background:#5dade2;"></div>
+          <div class="race-item-text"><h4>🏆 British — Winners</h4><p>Battle of Plassey 1757 → political masters of Bengal → eventually all India</p></div>
+        </div>
+        <div style="margin-top:14px;background:rgba(26,95,158,0.2);border-radius:8px;padding:12px;font-size:0.82rem;color:#aad4ff;">✅ <strong>British WIN</strong> — Systematic expansion post-Plassey 1757. Establish political control over entire India.</div>
+      </div>
+    </div>
+    <div class="race-verdict">
+      <h3>Why Did British Win?</h3>
+      <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;max-width:600px;margin:6px auto 0;">Superior military organization, political cunning, naval power, divide-and-rule tactics, and crucially — India's <strong style="color:var(--cream);">fragmented society had no unified front</strong> (caste divisions, religious divisions, no shared identity) made it impossible to coordinate resistance.</p>
+    </div>
+  </div>
+
+  <!-- ═══ EXAM TRAP ═══ -->
+  <div id="examtrap">
+    <div class="sec-head"><span class="sec-num">⚠️ Exam Trap</span><h2>Sardeshmukhi vs Chauth — Don't Get This Wrong</h2></div>
+    <div class="trap-box">
+      <div class="trap-label">🎯 High-Frequency UPSC Trap Question</div>
+      <div class="trap-grid">
+        <div class="trap-col">
+          <h4>🏹 Sardeshmukhi</h4>
+          <p><strong style="color:var(--cream);">= 1/10th of revenue</strong><br>Right as chieftain of Maratha territory.<br><br>
+          <span class="correct">✅ Bahadur Shah I gave this</span><br>
+          <span class="correct">✅ Zulfiqar Khan (under Jahandar Shah) also gave this</span></p>
+        </div>
+        <div class="trap-col">
+          <h4>💰 Chauth</h4>
+          <p><strong style="color:var(--cream);">= 1/4th of revenue</strong><br>Collected from NON-Maratha areas (protection money).<br><br>
+          <span class="wrong">❌ Bahadur Shah I did NOT give Chauth (half-hearted!)</span><br>
+          <span class="correct">✅ Zulfiqar Khan gave BOTH Sardeshmukhi AND Chauth</span></p>
+        </div>
+      </div>
+      <div style="background:var(--bg);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-top:16px;">
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7;">
+          <strong style="color:var(--gold-light);">Memory Trick:</strong> Bahadur Shah I was more restrictive — gave only the <em>smaller</em> Sardeshmukhi (1/10). Jahandar Shah's minister Zulfiqar Khan was trying to <em>win Maratha support</em> at any cost — so gave both the big AND small right. Bahadur Shah giving Chauth is a <strong style="color:#e74c3c;">common wrong answer</strong> in MCQs.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ KEY FACTS TABLE ═══ -->
+  <div id="factable">
+    <div class="sec-head"><span class="sec-num">Quick Revision</span><h2>Key Facts Table — Dates, Events, Persons</h2></div>
+    <div style="background:var(--bg2);border:1px solid var(--border);border-radius:16px;overflow:hidden;">
+      <table class="facts-table">
+        <thead><tr><th>Year</th><th>Event</th><th>Key Person(s)</th></tr></thead>
+        <tbody>
+          <tr><td>1707</td><td>Death of Aurangzeb — Mughal decline begins</td><td>Aurangzeb</td></tr>
+          <tr><td>1707</td><td>Battle of Jajau — Muazzam defeats Azam (Jun 12)</td><td>Muazzam → Bahadur Shah I</td></tr>
+          <tr><td>1709</td><td>Battle of Hyderabad — Muazzam defeats Kam Bakhsh</td><td>Muazzam</td></tr>
+          <tr><td>1712</td><td>Death of Bahadur Shah I — Era of nobles begins</td><td>Bahadur Shah I</td></tr>
+          <tr><td>1712</td><td>Ijara (Revenue Farming) system introduced</td><td>Zulfiqar Khan</td></tr>
+          <tr><td>1713</td><td>Jahandar Shah defeated at Agra</td><td>Farrukh Siyar</td></tr>
+          <tr><td>1719</td><td>Farrukh Siyar deposed</td><td>Sayyid Brothers + Balaji Vishwanath</td></tr>
+          <tr><td>1720</td><td>End of Sayyid Brothers' dominance</td><td>Nizam-ul-Mulk + Muhammad Shah</td></tr>
+          <tr><td>1724</td><td>Hyderabad independent state founded</td><td>Nizam-ul-Mulk (Asaf Jah)</td></tr>
+          <tr><td>1739</td><td>Battle of Karnal — Delhi looted</td><td>Nadir Shah vs Muhammad Shah Rangila</td></tr>
+          <tr><td>1748–1761</td><td>Afghan invasions (8+ times)</td><td>Ahmad Shah Abdali / Durrani</td></tr>
+          <tr><td>1757</td><td>Battle of Plassey — British become political power</td><td>Robert Clive vs Siraj-ud-Daulah</td></tr>
+          <tr><td>1761</td><td>Third Battle of Panipat</td><td>Ahmad Shah Abdali defeats Marathas</td></tr>
+          <tr><td>1803</td><td>Delhi captured by British</td><td>Shah Alam II becomes British pensioner</td></tr>
+          <tr><td>1857</td><td>Revolt of 1857 — End of Mughal Empire</td><td>Bahadur Shah Zafar II</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ═══ UNITS 2,3,4 PREVIEW ═══ -->
+  <div>
+    <div class="sec-head"><span class="sec-num">Preview</span><h2>Units 2, 3 & 4 — What's Coming Next</h2></div>
+    <div class="unit-preview-grid">
+      <div class="unit-preview" data-unit="2">
+        <div class="up-label">Unit 2 — Colonial Exploitation</div>
+        <div class="up-title">Economic Drain & Land Systems</div>
+        <ul class="up-list">
+          <li>Drain of Wealth Theory — Dadabhai Naoroji</li>
+          <li>Permanent Settlement (Bengal, 1793)</li>
+          <li>Ryotwari System</li>
+          <li>Mahalwari System</li>
+          <li>Destruction of Indian textile industry</li>
+          <li>Famines under British rule</li>
+        </ul>
+      </div>
+      <div class="unit-preview" data-unit="3">
+        <div class="up-label">Unit 3 — Early Reactions</div>
+        <div class="up-title">Revolts & Rebellions</div>
+        <ul class="up-list">
+          <li>Peasant revolts (Indigo, Deccan)</li>
+          <li>Tribal revolts (Santhal, Munda)</li>
+          <li>Civil rebellions</li>
+          <li>Revolt of 1857 — First War of Independence</li>
+          <li>Limitations: Regional, unorganised, no unified leadership</li>
+          <li>Bahadur Shah Zafar II leads revolt</li>
+        </ul>
+      </div>
+      <div class="unit-preview" data-unit="4">
+        <div class="up-label">Unit 4 — Freedom Struggle</div>
+        <div class="up-title">INC to Independence (1885–1947)</div>
+        <ul class="up-list">
+          <li>Moderate Phase — Gokhale, Dadabhai Naoroji</li>
+          <li>Extremist Phase — Bal Gangadhar Tilak, Lal-Bal-Pal</li>
+          <li>Revolutionary Phase — Bhagat Singh, Azad</li>
+          <li>Non-Cooperation Movement 1920</li>
+          <li>Civil Disobedience (Dandi March) 1930</li>
+          <li>Quit India Movement 1942 → Independence 1947</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ STORY FLOW ═══ -->
+  <div id="storyflow">
+    <div class="sec-head"><span class="sec-num">Connect the Dots</span><h2>The Story Flow — From 1707 to Independence</h2></div>
+    <div class="story-flow">
+      <div class="sf-item"><div class="sf-dot">1</div><div class="sf-content"><div class="sf-year">1707</div><div class="sf-title">Aurangzeb dies — Mughal decline starts</div><div class="sf-desc">Political and economic weaknesses surface. War of succession begins immediately among three sons.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">2</div><div class="sf-content"><div class="sf-year">1712 – 1719</div><div class="sf-title">Weak Later Mughals — Nobles become powerful</div><div class="sf-desc">Emperors are reduced to puppets. Sayyid Brothers become kingmakers. Real power shifts to nobles.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">3</div><div class="sf-content"><div class="sf-year">1724</div><div class="sf-title">Hyderabad founded — Physical disintegration starts</div><div class="sf-desc">Nizam-ul-Mulk declares independence. The empire begins breaking apart physically — Bengal and Awadh follow.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">4</div><div class="sf-content"><div class="sf-year">1739</div><div class="sf-title">Nadir Shah invades — Weakness EXPOSED to the world</div><div class="sf-desc">Battle of Karnal. Koh-i-Noor and Peacock Throne looted. India's vulnerability is now visible to all European powers.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">5</div><div class="sf-content"><div class="sf-year">1748 – 1761</div><div class="sf-title">Ahmad Shah Abdali invades — Northwest frontier lost</div><div class="sf-desc">Repeated Afghan invasions. Third Battle of Panipat 1761 — Marathas (India's best hope) are defeated.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">6</div><div class="sf-content"><div class="sf-year">1757</div><div class="sf-title">Battle of Plassey — British become political power</div><div class="sf-desc">Robert Clive defeats Siraj-ud-Daulah. British transition from traders to rulers of Bengal — and eventually all India.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">7</div><div class="sf-content"><div class="sf-year">1803</div><div class="sf-title">Delhi captured — Mughal emperor becomes British pensioner</div><div class="sf-desc">Shah Alam II placed under British protection. Mughal sovereignty is completely extinguished.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">8</div><div class="sf-content"><div class="sf-year">1857</div><div class="sf-title">Revolt of 1857 — Mughal Empire ends</div><div class="sf-desc">Bahadur Shah Zafar II leads the last revolt. Suppressed. Exiled to Rangoon. The 150-year decline is complete.</div></div></div>
+      <div class="sf-item"><div class="sf-dot">9</div><div class="sf-content"><div class="sf-year">1857 → 1947</div><div class="sf-title">Units 2, 3, 4 — Exploitation, Resistance, Freedom</div><div class="sf-desc">Colonial exploitation deepens → early revolts and rebellions → organized Freedom Struggle → Independence on 15 August 1947.</div></div></div>
+    </div>
+  </div>
+
+  <!-- ═══ MASTER MIND MAP ═══ -->
+  <div id="mindmap">
+    <div class="sec-head"><span class="sec-num">Mind Map</span><h2>18th Century India — Complete Mind Map</h2></div>
+    <div class="mindmap-wrap">
+      <div class="mindmap-header">☸ Visual Overview — All Key Concepts at a Glance ☸</div>
+      <svg viewBox="0 0 980 640" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:0 auto;min-width:740px;overflow:visible;">
+        <defs>
+          <marker id="mArrow" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+            <path d="M0,0 L0,6 L7,3 z" fill="rgba(201,150,42,0.5)"/>
+          </marker>
+        </defs>
+
+        <!-- Connector lines from center to branches -->
+        <line x1="490" y1="280" x2="490" y2="100" stroke="rgba(201,150,42,0.4)" stroke-width="2"/>
+        <line x1="460" y1="295" x2="160" y2="200" stroke="rgba(192,57,43,0.4)" stroke-width="2"/>
+        <line x1="460" y1="315" x2="100" y2="400" stroke="rgba(29,122,69,0.4)" stroke-width="2"/>
+        <line x1="460" y1="335" x2="160" y2="500" stroke="rgba(107,63,160,0.4)" stroke-width="2"/>
+        <line x1="520" y1="295" x2="820" y2="200" stroke="rgba(26,95,158,0.4)" stroke-width="2"/>
+        <line x1="520" y1="315" x2="880" y2="380" stroke="rgba(224,123,32,0.4)" stroke-width="2"/>
+        <line x1="520" y1="335" x2="820" y2="500" stroke="rgba(46,204,113,0.4)" stroke-width="2"/>
+
+        <!-- Leaf connectors - Political Decline -->
+        <line x1="160" y1="175" x2="60" y2="105" stroke="rgba(192,57,43,0.3)" stroke-width="1.2"/>
+        <line x1="145" y1="190" x2="30" y2="180" stroke="rgba(192,57,43,0.3)" stroke-width="1.2"/>
+        <line x1="145" y1="210" x2="40" y2="260" stroke="rgba(192,57,43,0.3)" stroke-width="1.2"/>
+
+        <!-- Leaf connectors - Economic -->
+        <line x1="100" y1="380" x2="10" y2="330" stroke="rgba(29,122,69,0.3)" stroke-width="1.2"/>
+        <line x1="95" y1="400" x2="10" y2="400" stroke="rgba(29,122,69,0.3)" stroke-width="1.2"/>
+        <line x1="100" y1="420" x2="10" y2="465" stroke="rgba(29,122,69,0.3)" stroke-width="1.2"/>
+
+        <!-- Leaf connectors - Invasions -->
+        <line x1="160" y1="490" x2="60" y2="450" stroke="rgba(107,63,160,0.3)" stroke-width="1.2"/>
+        <line x1="150" y1="515" x2="30" y2="530" stroke="rgba(107,63,160,0.3)" stroke-width="1.2"/>
+        <line x1="170" y1="530" x2="80" y2="590" stroke="rgba(107,63,160,0.3)" stroke-width="1.2"/>
+
+        <!-- Leaf connectors - Europeans -->
+        <line x1="820" y1="180" x2="920" y2="110" stroke="rgba(26,95,158,0.3)" stroke-width="1.2"/>
+        <line x1="830" y1="200" x2="930" y2="200" stroke="rgba(26,95,158,0.3)" stroke-width="1.2"/>
+        <line x1="820" y1="220" x2="920" y2="280" stroke="rgba(26,95,158,0.3)" stroke-width="1.2"/>
+
+        <!-- Leaf connectors - Regional States -->
+        <line x1="880" y1="365" x2="960" y2="310" stroke="rgba(224,123,32,0.3)" stroke-width="1.2"/>
+        <line x1="885" y1="385" x2="965" y2="385" stroke="rgba(224,123,32,0.3)" stroke-width="1.2"/>
+        <line x1="880" y1="400" x2="960" y2="450" stroke="rgba(224,123,32,0.3)" stroke-width="1.2"/>
+
+        <!-- Leaf connectors - New States -->
+        <line x1="820" y1="480" x2="920" y2="440" stroke="rgba(46,204,113,0.3)" stroke-width="1.2"/>
+        <line x1="820" y1="500" x2="920" y2="510" stroke="rgba(46,204,113,0.3)" stroke-width="1.2"/>
+        <line x1="820" y1="520" x2="920" y2="575" stroke="rgba(46,204,113,0.3)" stroke-width="1.2"/>
+
+        <!-- Top connection - Fragmented Society -->
+        <line x1="490" y1="280" x2="490" y2="540" stroke="rgba(139,69,19,0.4)" stroke-width="2"/>
+        <line x1="475" y1="555" x2="380" y2="600" stroke="rgba(139,69,19,0.3)" stroke-width="1.2"/>
+        <line x1="490" y1="560" x2="490" y2="610" stroke="rgba(139,69,19,0.3)" stroke-width="1.2"/>
+        <line x1="505" y1="555" x2="600" y2="600" stroke="rgba(139,69,19,0.3)" stroke-width="1.2"/>
+
+        <!-- ===== CENTER NODE ===== -->
+        <ellipse cx="490" cy="310" rx="90" ry="48" fill="#c9962a"/>
+        <text x="490" y="302" text-anchor="middle" fill="white" font-family="'Barlow Condensed',sans-serif" font-size="14" font-weight="800" letter-spacing="1">18th CENTURY</text>
+        <text x="490" y="320" text-anchor="middle" fill="rgba(255,255,255,0.9)" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">INDIA</text>
+        <text x="490" y="336" text-anchor="middle" fill="rgba(255,255,255,0.7)" font-family="'Barlow',sans-serif" font-size="9">Post-Aurangzeb</text>
+
+        <!-- ===== TOP: POLITICAL DECLINE ===== -->
+        <rect x="400" y="60" width="180" height="48" rx="10" fill="rgba(201,150,42,0.15)" stroke="#c9962a" stroke-width="1.8"/>
+        <text x="490" y="82" text-anchor="middle" fill="#f0c84a" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">POLITICAL DECLINE</text>
+        <text x="490" y="99" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Death of Aurangzeb 1707 → Collapse</text>
+
+        <!-- Political leaves -->
+        <rect x="-10" y="78" width="120" height="30" rx="7" fill="rgba(201,150,42,0.1)" stroke="rgba(201,150,42,0.3)" stroke-width="1"/>
+        <text x="50" y="90" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Mughal Weakens</text>
+        <text x="50" y="102" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Nobles take power</text>
+
+        <rect x="-40" y="154" width="120" height="30" rx="7" fill="rgba(201,150,42,0.1)" stroke="rgba(201,150,42,0.3)" stroke-width="1"/>
+        <text x="20" y="167" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Successor States</text>
+        <text x="20" y="179" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Bengal, Awadh, Hyd.</text>
+
+        <rect x="-30" y="230" width="120" height="30" rx="7" fill="rgba(201,150,42,0.1)" stroke="rgba(201,150,42,0.3)" stroke-width="1"/>
+        <text x="30" y="243" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">New States Rise</text>
+        <text x="30" y="255" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Marathas, Sikhs, Jats</text>
+
+        <!-- ===== LEFT-TOP: ECONOMIC ===== -->
+        <rect x="70" y="162" width="180" height="48" rx="10" fill="rgba(192,57,43,0.12)" stroke="#c0392b" stroke-width="1.8"/>
+        <text x="160" y="183" text-anchor="middle" fill="#e8b0a8" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">ECONOMIC DECLINE</text>
+        <text x="160" y="200" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">25% World GDP → Colonial drain</text>
+
+        <rect x="-55" y="303" width="125" height="28" rx="7" fill="rgba(192,57,43,0.1)" stroke="rgba(192,57,43,0.3)" stroke-width="1"/>
+        <text x="-55" y="314" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">India: 25% World GDP</text>
+        <text x="-55" y="325" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Before British exploitation</text>
+
+        <rect x="-55" y="375" width="125" height="28" rx="7" fill="rgba(192,57,43,0.1)" stroke="rgba(192,57,43,0.3)" stroke-width="1"/>
+        <text x="-55" y="387" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Drain of Wealth</text>
+        <text x="-55" y="399" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Dadabhai Naoroji's theory</text>
+
+        <rect x="-55" y="440" width="125" height="28" rx="7" fill="rgba(192,57,43,0.1)" stroke="rgba(192,57,43,0.3)" stroke-width="1"/>
+        <text x="-55" y="452" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Textile Destruction</text>
+        <text x="-55" y="464" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Indian industries ruined</text>
+
+        <!-- ===== LEFT-BOTTOM: FOREIGN INVASIONS ===== -->
+        <rect x="60" y="362" width="190" height="48" rx="10" fill="rgba(29,122,69,0.12)" stroke="#1d7a45" stroke-width="1.8"/>
+        <text x="155" y="383" text-anchor="middle" fill="#a8e8b0" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">FOREIGN INVASIONS</text>
+        <text x="155" y="400" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Nadir Shah 1739 · Abdali 1748–61</text>
+
+        <!-- Invasion leaves -->
+        <rect x="-10" y="420" width="130" height="30" rx="7" fill="rgba(29,122,69,0.1)" stroke="rgba(29,122,69,0.3)" stroke-width="1"/>
+        <text x="55" y="431" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Nadir Shah 1739</text>
+        <text x="55" y="443" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Karnal · Koh-i-Noor looted</text>
+
+        <rect x="-40" y="500" width="130" height="30" rx="7" fill="rgba(29,122,69,0.1)" stroke="rgba(29,122,69,0.3)" stroke-width="1"/>
+        <text x="25" y="512" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Abdali 1748–1761</text>
+        <text x="25" y="524" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">8 invasions · 3rd Panipat</text>
+
+        <rect x="-10" y="565" width="130" height="30" rx="7" fill="rgba(29,122,69,0.1)" stroke="rgba(29,122,69,0.3)" stroke-width="1"/>
+        <text x="55" y="577" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Maratha Defeat 1761</text>
+        <text x="55" y="589" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">India's best hope fails</text>
+
+        <!-- ===== RIGHT-TOP: EUROPEANS ===== -->
+        <rect x="740" y="162" width="170" height="48" rx="10" fill="rgba(26,95,158,0.12)" stroke="#1a5f9e" stroke-width="1.8"/>
+        <text x="825" y="183" text-anchor="middle" fill="#aad4ff" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">EUROPEANS ARRIVE</text>
+        <text x="825" y="200" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Portuguese 1498 → British Win</text>
+
+        <rect x="858" y="82" width="120" height="30" rx="7" fill="rgba(26,95,158,0.1)" stroke="rgba(26,95,158,0.3)" stroke-width="1"/>
+        <text x="918" y="94" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Portuguese 1498</text>
+        <text x="918" y="106" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">First to arrive in India</text>
+
+        <rect x="858" y="170" width="120" height="30" rx="7" fill="rgba(26,95,158,0.1)" stroke="rgba(26,95,158,0.3)" stroke-width="1"/>
+        <text x="918" y="182" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Dutch · French</text>
+        <text x="918" y="194" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Lost to British eventually</text>
+
+        <rect x="858" y="255" width="120" height="30" rx="7" fill="rgba(192,57,43,0.15)" stroke="rgba(192,57,43,0.4)" stroke-width="1.2"/>
+        <text x="918" y="267" text-anchor="middle" fill="#f0c84a" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="700">British WIN 🏆</text>
+        <text x="918" y="279" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Plassey 1757 → Rule India</text>
+
+        <!-- ===== RIGHT-MID: REGIONAL STATES ===== -->
+        <rect x="740" y="345" width="180" height="48" rx="10" fill="rgba(224,123,32,0.12)" stroke="#e07b20" stroke-width="1.8"/>
+        <text x="830" y="366" text-anchor="middle" fill="#f5c08a" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">REGIONAL STATES</text>
+        <text x="830" y="383" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Post-Mughal fragmentation</text>
+
+        <rect x="858" y="285" width="120" height="28" rx="7" fill="rgba(224,123,32,0.1)" stroke="rgba(224,123,32,0.3)" stroke-width="1"/>
+        <text x="918" y="297" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Hyderabad 1724</text>
+        <text x="918" y="309" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Nizam-ul-Mulk (Asaf Jah)</text>
+
+        <rect x="858" y="360" width="120" height="28" rx="7" fill="rgba(224,123,32,0.1)" stroke="rgba(224,123,32,0.3)" stroke-width="1"/>
+        <text x="918" y="372" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Bengal · Awadh</text>
+        <text x="918" y="384" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Successor states</text>
+
+        <rect x="858" y="425" width="120" height="28" rx="7" fill="rgba(224,123,32,0.1)" stroke="rgba(224,123,32,0.3)" stroke-width="1"/>
+        <text x="918" y="437" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Mysore · Kerala</text>
+        <text x="918" y="449" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">New independent states</text>
+
+        <!-- ===== RIGHT-BOTTOM: NEW RESISTANT STATES ===== -->
+        <rect x="740" y="462" width="175" height="48" rx="10" fill="rgba(46,204,113,0.1)" stroke="#2ecc71" stroke-width="1.8"/>
+        <text x="827" y="483" text-anchor="middle" fill="#a8e8c0" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">RESISTANT POWERS</text>
+        <text x="827" y="500" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">Rajputs · Sikhs · Jats · Marathas</text>
+
+        <rect x="858" y="415" width="120" height="28" rx="7" fill="rgba(46,204,113,0.1)" stroke="rgba(46,204,113,0.3)" stroke-width="1"/>
+        <text x="918" y="427" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Marathas ⭐</text>
+        <text x="918" y="439" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Most powerful Indian force</text>
+
+        <rect x="858" y="483" width="120" height="28" rx="7" fill="rgba(46,204,113,0.1)" stroke="rgba(46,204,113,0.3)" stroke-width="1"/>
+        <text x="918" y="495" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Sikhs (Punjab)</text>
+        <text x="918" y="507" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Banda Bahadur leads revolt</text>
+
+        <rect x="858" y="548" width="120" height="28" rx="7" fill="rgba(46,204,113,0.1)" stroke="rgba(46,204,113,0.3)" stroke-width="1"/>
+        <text x="918" y="560" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Rajputs · Jats</text>
+        <text x="918" y="572" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Regional resistance powers</text>
+
+        <!-- ===== BOTTOM: FRAGMENTED SOCIETY ===== -->
+        <rect x="390" y="532" width="200" height="48" rx="10" fill="rgba(139,69,19,0.15)" stroke="#8b4513" stroke-width="1.8"/>
+        <text x="490" y="553" text-anchor="middle" fill="#e8c8a0" font-family="'Barlow Condensed',sans-serif" font-size="12" font-weight="700">FRAGMENTED SOCIETY</text>
+        <text x="490" y="570" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="9">No unified front against invaders</text>
+
+        <rect x="320" y="590" width="110" height="28" rx="7" fill="rgba(139,69,19,0.1)" stroke="rgba(139,69,19,0.3)" stroke-width="1"/>
+        <text x="375" y="601" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Caste Divisions</text>
+        <text x="375" y="613" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">No social unity</text>
+
+        <rect x="435" y="600" width="110" height="28" rx="7" fill="rgba(139,69,19,0.1)" stroke="rgba(139,69,19,0.3)" stroke-width="1"/>
+        <text x="490" y="612" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Religious Divisions</text>
+        <text x="490" y="624" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Exploit by British</text>
+
+        <rect x="550" y="590" width="110" height="28" rx="7" fill="rgba(139,69,19,0.1)" stroke="rgba(139,69,19,0.3)" stroke-width="1"/>
+        <text x="605" y="601" text-anchor="middle" fill="#f5ead8" font-family="'Barlow',sans-serif" font-size="8.5" font-weight="600">Gender Inequality</text>
+        <text x="605" y="613" text-anchor="middle" fill="#a89878" font-family="'Barlow',sans-serif" font-size="7.5">Cultural stagnation</text>
+
+        <!-- Legend -->
+        <rect x="300" y="10" width="12" height="12" rx="3" fill="rgba(201,150,42,0.4)"/>
+        <text x="317" y="21" fill="#a89878" font-family="'Barlow',sans-serif" font-size="8.5">Political</text>
+        <rect x="370" y="10" width="12" height="12" rx="3" fill="rgba(192,57,43,0.4)"/>
+        <text x="387" y="21" fill="#a89878" font-family="'Barlow',sans-serif" font-size="8.5">Economic</text>
+        <rect x="440" y="10" width="12" height="12" rx="3" fill="rgba(29,122,69,0.4)"/>
+        <text x="457" y="21" fill="#a89878" font-family="'Barlow',sans-serif" font-size="8.5">Invasions</text>
+        <rect x="512" y="10" width="12" height="12" rx="3" fill="rgba(26,95,158,0.4)"/>
+        <text x="529" y="21" fill="#a89878" font-family="'Barlow',sans-serif" font-size="8.5">Europeans</text>
+        <rect x="595" y="10" width="12" height="12" rx="3" fill="rgba(224,123,32,0.4)"/>
+        <text x="612" y="21" fill="#a89878" font-family="'Barlow',sans-serif" font-size="8.5">States</text>
+        <rect x="645" y="10" width="12" height="12" rx="3" fill="rgba(46,204,113,0.4)"/>
+        <text x="662" y="21" fill="#a89878" font-family="'Barlow',sans-serif" font-size="8.5">Resistance</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- ═══ SUMMARY ═══ -->
+  <div class="summary-banner">
+    <h3>One-Paragraph Summary</h3>
+    <p>After Aurangzeb's death in <strong>1707</strong>, the Mughal Empire entered a 150-year decline driven by weak successors, powerful nobles (Sayyid Brothers), and devastating foreign invasions — Nadir Shah (1739) and Ahmad Shah Abdali (1748–1761). As the empire physically disintegrated into successor and new regional states, a power vacuum emerged. <strong>Marathas</strong> — India's strongest power — failed at the Third Battle of Panipat (1761). Meanwhile, the <strong>British East India Company</strong>, originally traders, seized the moment at the Battle of Plassey (1757) to become political masters. By 1803, Delhi itself was under British control. This sets the stage for <em>colonial exploitation (Unit 2), popular resistance (Unit 3), and the organized Freedom Struggle (Unit 4)</em> — culminating in Independence on <strong>15 August 1947</strong>.</p>
+  </div>
+
+  <div style="text-align:center;padding:30px 0 10px;color:var(--muted);font-size:0.78rem;">
+    <div style="font-family:'EB Garamond',serif;color:var(--gold);font-size:1.1rem;font-style:italic;margin-bottom:6px;">Jai Hind</div>
+    Modern Indian History — UPSC Prelims 2026 · Marathon Session Notes
+  </div>
+
+</div><!-- /container -->
+</body>
+</html>
