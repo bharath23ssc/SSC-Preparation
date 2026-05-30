@@ -1,0 +1,79 @@
+I am uploading handwritten class notes (PDF). 
+
+Please do the following:
+
+---
+
+---
+
+**STEP 2 — Group Similar Problems**
+Group all problems by their PROBLEM TYPE / PATTERN.
+Give each group a name like:
+"GROUP 1 — Find Maximum Marks (One Student)"
+"GROUP 2 — Find Maximum Marks (Two Students Compared)"
+etc.
+
+For each group, first write:
+- What is the PATTERN of this group (1-2 lines)
+- The GENERAL APPROACH / METHOD (step-by-step formula)
+- A KEY INSIGHT or SHORTCUT tip
+
+---
+
+**STEP 3 — For EVERY Problem follow this EXACT format:**
+
+> **Full Question:** [Complete question exactly as written, 
+  including Hindi translation is not required if present, 
+  and ALL answer options (A) (B) (C) (D) (E)]
+
+**Quick Summary:** [One line — what is given, what to find]
+
+**Approach:** [Which method to use and why]
+
+**Solution:**
+[Full step-by-step working in a code block]
+
+**✔️ Answer: [(X) correct option with value]**
+
+> 💡 **Key Insight:** [Shortcut or pattern to remember]
+
+---
+
+**STEP 4 — If a problem has multiple methods** 
+(Method 1, Method 2, Method 3 as shown in notes):
+Show ALL methods clearly labeled.
+Mention which method is FASTEST for exams.
+
+---
+
+**STEP 5 — End of each GROUP**
+Add a small insight box summarizing:
+- What makes this group different from others
+- Common mistake to avoid
+
+---
+
+**STEP 6 — End of full document**
+Add two sections:
+
+A) QUICK REVISION TABLE
+A table with columns:
+| Problem Type | What's Given | What to Find | Key Formula/Step |
+
+B) GOLDEN SHORTCUTS
+5-7 bullet points of the most important tricks,
+shortcuts and patterns from the entire document.
+
+---
+
+**FORMATTING RULES:**
+- Use clean Markdown
+- Use code blocks for all calculations
+- Never skip a question — include every single problem
+- Full question ALWAYS comes before solution
+- Group problems by TYPE not by page order
+- Output as a single .md file ready to download
+
+---
+Including all the formula So I can learn quickly
+**OUTPUT:** Save as a .md file and present it for download.
