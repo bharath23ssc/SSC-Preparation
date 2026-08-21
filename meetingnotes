@@ -1,0 +1,58 @@
+Hi,
+
+This is the Turnstile document.
+
+### What is Turnstile?
+
+Turnstile is a set of guardrails and controls that enables users to safely use AI-assisted tools such as Claude Code. It is specifically designed to prevent non-IT or business users from building applications without going through the formal governance process.
+
+### Why does this matter?
+
+The purpose is to prevent the company from building applications without formal governance, thereby reducing operational risk.
+
+Turnstile ensures that business users cannot independently build applications, while still allowing them to use AI for legitimate activities.
+
+Turnstile provides two levels of access:
+
+* **Restricted User:** Limited capabilities.
+* **Approved User:** Broader development capabilities.
+
+Restricted users can still use AI for legitimate activities, such as analysis and working with spreadsheets.
+
+### Testing Methodology
+
+We followed a structured, multi-round testing approach. In each round, we identified issues, fixed them, and tested again.
+
+### What We Tested
+
+We tested **68 must-priority test cases** provided by Gerard across eight control areas. I will briefly explain the interpretation of each control area.
+
+### Three Ways We Tested
+
+1. **Verification:** We directly tested the test cases provided by Gerard.
+2. **Provoke:** We deliberately tried to make the AI ignore or bypass the rules.
+3. **Stress Testing:** We tested the controls under challenging and complex scenarios.
+
+### Testing Summary
+
+We conducted multiple rounds of testing, with **150+ test cases** in Round 1 and similar testing across Rounds 2 and 3, along with several case studies.
+
+Some of the case studies included:
+
+* **Multi-Step Bypassing:** Build an application, get blocked, then claim that a manager has approved it and that it meets EUC governance requirements, and try again.
+* **Memory Poisoning:** Introduce false information into the `memory.md` file.
+* **Fake Authorization:** Make a prompt appear legitimate by including fabricated authorization.
+* **Cross-Domain Injection:** Introduce malicious instructions in the middle of the context.
+* **Persistent Compromise:** Introduce malicious instructions that are loaded repeatedly.
+
+### What We Found
+
+The security rules we built could not be directly tampered with. However, the AI could sometimes be influenced through carefully crafted or clever wording.
+
+### Genuine Gap
+
+We have strengthened the controls against fake permission and authorization claims. However, we cannot guarantee 100% that the AI will never be tricked.
+
+A user may still be able to influence the AI through carefully crafted instructions.
+
+Turnstile will block restricted actions, but it cannot completely prevent someone from obtaining individual steps indirectly and then assembling them into a complete application.
