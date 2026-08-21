@@ -1,0 +1,312 @@
+# Turnstile: Keeping AI-Assisted Work Inside the Rules
+
+**Risk Technology · Governance Briefing · Draft for Review**
+
+## 1. Executive Summary
+
+Turnstile is a set of controls designed to let business users safely use **AI coding assistants such as Claude Code** for everyday work — analysing spreadsheets, drafting documents, and creating small scripts — while preventing them from unintentionally creating unsupported applications outside Nomura's **End User Computing (EUC) governance framework**.
+
+The key idea is simple:
+
+> **Turnstile acts as a guardrail at the point where an idea could become an application.**
+
+This helps prevent small scripts or spreadsheets from gradually becoming business-critical tools without clear ownership, maintenance, or governance.
+
+---
+
+## 2. Why Turnstile Matters
+
+Nomura needs to prevent applications from being created outside the appropriate governance and oversight framework.
+
+An unsupported application can create several risks:
+
+* No clearly accountable owner
+* No defined maintenance process
+* Limited visibility for Risk and Technology teams
+* Difficulty supporting the application if something goes wrong
+* Potential audit and regulatory concerns
+
+The risk is not necessarily the size of the first piece of code.
+
+A simple script can gradually become an important business process:
+
+**Small script → More features → More users → Business dependency → Critical application**
+
+AI coding assistants make this progression much easier because they can rapidly create and modify software.
+
+**Turnstile is intended to stop that journey when appropriate, before it becomes a governance problem.**
+
+---
+
+## 3. What Turnstile Does
+
+Turnstile separates users into different access levels.
+
+### Approved users
+
+Approved users can access the broader development capabilities they need.
+
+### Restricted users
+
+Restricted users can still use AI for legitimate everyday activities, such as:
+
+* Analysing data
+* Working with spreadsheets
+* Drafting documents
+* Reviewing information
+* Creating appropriate one-off scripts
+
+However, they are restricted from activities that could result in an unsupported application being created, modified, or deployed.
+
+The objective is **not to stop people using AI**.
+
+The objective is to ensure that AI-assisted development happens within the appropriate governance boundaries.
+
+---
+
+# 4. What We Tested
+
+Before relying on Turnstile in production, we deliberately tried to break it.
+
+We used **68 MUST-priority test cases across eight control areas**, covering normal use as well as deliberate attempts to bypass the controls.
+
+| Area                           | What we checked                                                                                      |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------- |
+| **1. Access Tiers**            | Whether users receive the correct level of access                                                    |
+| **2. Prevention Controls**     | Whether restricted users are prevented from building applications while normal work remains possible |
+| **3. Application Detection**   | Whether Turnstile recognises when a user is working inside an existing application                   |
+| **4. Tool Access**             | Whether restricted users can access safe tools while development/deployment tools remain restricted  |
+| **5. Audit & Monitoring**      | Whether blocked actions are recorded for review                                                      |
+| **6. Rule Configuration**      | Whether rules can be updated without releasing a new system version                                  |
+| **7. User Experience**         | Whether users receive clear explanations when an action is blocked                                   |
+| **8. Non-Functional Controls** | Whether the system remains fast, reliable, and fails safely                                          |
+
+---
+
+# 5. Three Ways We Tested the Controls
+
+We grouped our testing into three simple categories.
+
+## VERIFY — Does it work normally?
+
+We checked whether the documented rules actually worked.
+
+Examples included:
+
+* Testing every documented control
+* Making direct requests for actions that should be blocked
+* Confirming that permitted activities continued to work
+
+**Result:** The straightforward cases worked as expected.
+
+---
+
+## PROVOKE — Can someone talk around the controls?
+
+We deliberately tried to persuade the AI to ignore the rules.
+
+We tested scenarios such as:
+
+* Fake approvals
+* Fake management instructions
+* Fabricated internal messages
+* Gradually escalating requests
+* Disguising restricted requests as testing or learning exercises
+
+**Result:** This is where the most important remaining challenge was found.
+
+---
+
+## STRESS — Does the control remain safe under unusual conditions?
+
+We tested the system under less predictable circumstances.
+
+This included:
+
+* Comparing different AI models
+* Testing the backup safety mechanism
+* Providing unusual or malformed inputs
+* Checking how the system behaves when components fail
+
+**Result:** Most controls held, but the safety-net behaviour required additional strengthening.
+
+---
+
+# 6. Deliberate Breaking Strategies
+
+We also conducted a dedicated exercise to simulate a determined user trying to defeat the controls.
+
+The testing covered five broad strategies:
+
+### 1. Multi-Step Bypassing
+
+Breaking one restricted request into several smaller, harmless-looking requests so that the final outcome is still restricted.
+
+### 2. Memory Poisoning
+
+Introducing false information that could influence future AI responses.
+
+### 3. Fake Authorisation
+
+Providing instructions that appear to be legitimate internal authorisation but are actually fabricated.
+
+### 4. Cross-Domain Injection
+
+Introducing malicious instructions through one source and attempting to have them treated as trusted instructions in another context.
+
+### 5. Persistent Compromise
+
+Attempting to make a malicious instruction continue influencing the AI across multiple interactions.
+
+These techniques did not require privileged access or specialist tooling.
+
+They mainly required **patience, system knowledge, and carefully constructed instructions**.
+
+Where we found a weakness, we treated it as an engineering issue, fixed it where possible, and re-tested it.
+
+> **The detailed techniques and payloads are intentionally excluded from this document and are available through Risk Technology for controlled security review.**
+
+---
+
+# 7. What We Found
+
+The testing showed an important distinction between **physical security of the controls** and **the AI's ability to follow those controls**.
+
+The Turnstile controls themselves remained present and protected from modification.
+
+However, the AI model could sometimes be persuaded to ignore those controls through carefully constructed instructions.
+
+In simple terms:
+
+> **The controls were still there — the model was convinced not to apply them.**
+
+This is the main residual risk identified by testing.
+
+---
+
+# 8. Where the Genuine Gap Remains
+
+There are two important limitations.
+
+## A. AI Model Behaviour
+
+AI models can be influenced by sophisticated prompt injection.
+
+A sufficiently convincing fake instruction can sometimes cause the model to behave as though a user has additional permissions.
+
+The policy has been strengthened to treat injected authorisation instructions as untrusted, but this does not provide a guarantee that the model can never be influenced.
+
+**This is a behavioural limitation of the AI layer.**
+
+---
+
+## B. The Blocking Hook
+
+The blocking mechanism is deliberately narrow.
+
+It checks actions before certain tool calls and blocks patterns that it knows should not be allowed.
+
+This works well for known restricted actions, but it cannot identify every possible way of achieving the same outcome.
+
+For example, a user could potentially:
+
+* Build something gradually through several ordinary requests
+* Ask for detailed instructions instead of directly asking the AI to build it
+* Receive information that is effectively equivalent to the restricted output and then assemble it themselves
+
+This is an accepted architectural limitation rather than evidence that the controls have been tampered with.
+
+---
+
+# 9. What This Gap Is **Not**
+
+It is important to distinguish **tamper resistance** from **AI behavioural resistance**.
+
+### Tamper resistance
+
+The managed installation prevents users from modifying the Turnstile controls themselves.
+
+**This is working as designed.**
+
+### AI behavioural resistance
+
+The AI may still be persuaded to ignore a control through sufficiently sophisticated instructions.
+
+**This is the remaining limitation.**
+
+The network proxy was also never intended to be the primary enforcement point, so the fact that enforcement does not happen there is **not considered a control gap**.
+
+---
+
+# 10. What Has Been Fixed
+
+| Status               | Improvement                                                                                                                                           |
+| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Fixed**            | Fake authorisation messages disguised as internal instructions are now blocked in the majority of tested cases                                        |
+| **Fixed**            | Additional file types that should have been restricted are now blocked                                                                                |
+| **Fixed**            | The lightest AI model, which was most susceptible to being persuaded around controls, is no longer available in restricted mode                       |
+| **Fixed**            | The AI no longer provides guidance on how to work around a block after refusing a request                                                             |
+| **Accepted for now** | The AI can still provide detailed information about how something could be built when asked for an explanation rather than directly asked to build it |
+
+The final item is currently managed through **behavioural policy rather than a technical hard block** because there is no clean client-side mechanism that can reliably prevent informationally equivalent output.
+
+---
+
+# 11. Overall Assessment
+
+The testing provides a clear picture of where Turnstile is strong and where its limitations are.
+
+### What works well
+
+* Straightforward restricted actions are blocked
+* Approved users retain the capabilities they need
+* Restricted users can continue everyday AI-assisted work
+* Controls are protected from direct modification
+* Blocked actions can be monitored
+* Rules can be updated
+* User-facing block messages are provided
+* Several identified weaknesses have already been fixed
+
+### What remains
+
+The remaining risk is primarily **behavioural**.
+
+A sufficiently knowledgeable user may be able to influence the AI through:
+
+* Prompt injection
+* Gradual accumulation of individually harmless actions
+* Informationally equivalent output
+
+These limitations cannot be completely eliminated through client-side controls alone.
+
+---
+
+# 12. Bottom Line
+
+> **Turnstile provides a practical governance guardrail for AI-assisted development.**
+
+It does not claim to make AI completely immune to manipulation.
+
+Instead, it provides multiple layers of protection:
+
+**Governance policy → Access tiers → Tool restrictions → Blocking controls → Audit & monitoring → Tamper-resistant installation**
+
+Our testing found that the **normal and obvious cases hold**, while sophisticated attempts to influence the AI remain the main residual risk.
+
+The important point is that these limitations were identified through deliberate testing rather than discovered after deployment.
+
+**Three rounds · Three AI models · 68 MUST-priority test cases · 8 control areas · 300+ deliberate attempts**
+
+The control is therefore considered **effective for its intended purpose, with clearly understood and documented architectural limitations**.
+
+---
+
+## 13. Security Testing Note
+
+This document intentionally does not contain the specific prompt wording, payloads, tag names, or step-by-step bypass techniques used during testing.
+
+Those details could themselves provide a practical guide for circumventing the controls.
+
+Full technical evidence and testing methodology can be made available through **Risk Technology under controlled security review**.
+
+**Status: Draft for Review**
