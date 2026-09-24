@@ -1,1 +1,11 @@
-Hi Gerard, based on your feedback, I’ve updated the code and pushed the changes to the dev branch, along with migrating it to the RDQW schema. Please let me know if you have any further feedback or suggestions for UI improvements. Thank you.
+Hi Gerard, yesterday you mentioned that we should connect for some more feedback.
+
+In today’s meeting, I also wanted to clarify a few things and discuss some of my doubts.
+
+First, we don’t need to manually add any users to the table. When a new user is detected, the system will automatically add the user and map the Functional Head and Regional Head.
+
+Second, regarding Risk HQ, the details will come from LFAP, not from the User table.
+
+Third, we don’t have a separate Role table.
+
+I’d like to go through these points with you and understand if any changes are needed. I’ll also incorporate your feedback. I can explain why I followed the current approach as well.
